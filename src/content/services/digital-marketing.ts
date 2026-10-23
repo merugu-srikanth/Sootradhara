@@ -1,0 +1,118 @@
+import type { ServiceDetail } from "../types";
+
+const content: ServiceDetail = {
+  visual: "chart",
+  highlights: ["Local SEO & Google Maps", "Google & Meta ads", "Conversion tracking", "Plain monthly reports"],
+  overview: {
+    heading: "Marketing that brings enquiries, not just likes",
+    paragraphs: [
+      "Many businesses have tried digital marketing and come away disappointed: lots of impressions, likes and followers, but very few real customers. The problem is usually not the channel. It's a lack of focus on what matters, which is the right people finding you at the right moment and taking a clear action, like calling, messaging or buying.",
+      "We plan marketing backwards from your business goals. First we understand who your best customers are, what they search for, and how they decide. Then we choose the channels that make sense for you, whether that's SEO and Google Maps for local discovery, Google Search ads for high-intent buyers, Meta ads on Instagram and Facebook for awareness and retargeting, or consistent social media content to build trust over time.",
+      "Every campaign is connected to proper tracking, so we can see which keywords, ads and posts lead to calls, WhatsApp chats, form fills and sales. That lets us cut what isn't working and invest more in what is. And because we also build websites, we can fix slow or confusing landing pages that quietly waste your ad budget.",
+      "You'll get a short, plain-language report every month showing what we did, what happened and what we'll try next. No jargon-filled spreadsheets, and no vanity metrics dressed up as results.",
+    ],
+  },
+  signs: [
+    "Your business doesn't appear when people search for your service nearby",
+    "You spend on ads but can't tell which ones bring customers",
+    "Your Google Business Profile is incomplete or rarely updated",
+    "Social media gets likes but very few enquiries",
+    "Competitors rank above you on Google for important searches",
+    "You don't have time to plan and post content consistently",
+  ],
+  audiences: [
+    { title: "Local service businesses", text: "Clinics, salons, gyms, coaching centres and home services that need nearby customers to find and call them." },
+    { title: "Real estate & builders", text: "Project launches and site-visit campaigns targeted to buyers in the right locations and budgets." },
+    { title: "E-commerce & D2C brands", text: "Shopping ads, Meta campaigns, retargeting and product SEO focused on sales and return on ad spend." },
+    { title: "B2B companies", text: "Search and LinkedIn campaigns, thought-leadership content and landing pages that generate qualified leads." },
+    { title: "Education & training", text: "Admission-season campaigns, course pages and local SEO for schools, colleges and institutes." },
+    { title: "Startups", text: "Launch campaigns, early user acquisition and testing which messages and channels work best." },
+  ],
+  serviceTypes: [
+    { title: "Search engine optimisation", text: "Keyword research, on-page optimisation, technical fixes, content and link building to grow organic traffic.", bestFor: "Long-term, steady growth" },
+    { title: "Local SEO & Google Maps", text: "Google Business Profile optimisation, local pages, citations and review strategy to win nearby searches.", bestFor: "Businesses serving a city or area" },
+    { title: "Google Ads", text: "Search, Performance Max, Shopping and YouTube campaigns with careful keyword and budget control.", bestFor: "Quick, high-intent leads" },
+    { title: "Meta ads", text: "Instagram and Facebook campaigns for awareness, leads, sales and retargeting.", bestFor: "Visual products and local audiences" },
+    { title: "Social media management", text: "Content calendars, post and reel design, captions and community replies.", bestFor: "Building trust and brand recall" },
+    { title: "Content marketing", text: "Blog articles, guides and landing pages that answer customer questions and rank on Google.", bestFor: "Educating buyers and SEO growth" },
+  ],
+  features: [
+    { title: "Keyword & competitor research", text: "We find what your customers actually search for and where competitors are winning or missing." },
+    { title: "Technical SEO fixes", text: "Speed, mobile usability, indexing, broken links and structured data improvements." },
+    { title: "Google Business Profile care", text: "Categories, photos, posts, services, Q&A and review responses kept up to date." },
+    { title: "Landing page improvements", text: "Clear headlines, strong calls to action and faster pages that turn more clicks into enquiries." },
+    { title: "Conversion tracking", text: "Calls, WhatsApp clicks, form fills and purchases tracked in GA4 and ad platforms." },
+    { title: "Audience targeting", text: "Location, interests, intent and lookalike audiences chosen carefully to avoid wasted spend." },
+    { title: "Creative production", text: "Ad images, carousels, short reels and copy designed for each platform." },
+    { title: "Budget management", text: "Daily monitoring and weekly adjustments so your budget goes to the best-performing campaigns." },
+    { title: "Review strategy", text: "Simple systems to ask happy customers for genuine Google reviews." },
+    { title: "Monthly reporting", text: "A short report on leads, costs, rankings and next steps, plus a review call." },
+  ],
+  benefits: [
+    { title: "More of the right enquiries", text: "Targeting people with real intent brings leads that are more likely to buy." },
+    { title: "Clear return on spend", text: "Proper tracking shows what each lead and sale costs, so you can invest with confidence." },
+    { title: "Lasting visibility", text: "Good SEO keeps bringing visitors long after the work is done, unlike ads that stop when you pause them." },
+    { title: "A stronger, trusted brand", text: "Consistent content and genuine reviews make customers more comfortable choosing you." },
+  ],
+  process: [
+    { title: "Audit", text: "We review your website, Google profile, ads, social channels and competitors to find quick wins and gaps.", duration: "1 week" },
+    { title: "Strategy & 90-day plan", text: "We agree on goals, channels, budgets and priorities for the first three months.", duration: "3–5 days" },
+    { title: "Setup & tracking", text: "We set up or fix analytics, conversion tracking, ad accounts and Google Business Profile.", duration: "1 week" },
+    { title: "Launch campaigns & content", text: "Ads go live, SEO fixes begin and the content calendar starts.", duration: "2–3 weeks" },
+    { title: "Optimise weekly", text: "We adjust bids, audiences, keywords and creatives based on real results.", duration: "Ongoing" },
+    { title: "Report & plan ahead", text: "A monthly report and call to review progress and plan the next steps.", duration: "Monthly" },
+  ],
+  options: [
+    { name: "Local visibility", summary: "Get found by nearby customers on Google and Maps.", includes: ["Google Business Profile setup & care", "Local SEO for key pages", "Review strategy", "Basic monthly posts", "Monthly report"], bestFor: "Local service businesses", timeline: "Ongoing, monthly" },
+    { name: "Lead generation", summary: "Paid ads plus SEO focused on steady enquiries.", includes: ["Google or Meta ad campaigns", "Landing page improvements", "Conversion tracking", "SEO content plan", "Weekly optimisation"], bestFor: "Businesses ready to scale enquiries", timeline: "Ongoing, monthly" },
+    { name: "Full growth", summary: "SEO, ads, social and content working together.", includes: ["Multi-channel campaigns", "Social media management", "Content & blog writing", "Creative production", "Strategy calls"], bestFor: "Brands investing in growth", timeline: "Ongoing, monthly" },
+  ],
+  costFactors: [
+    { title: "Channels", text: "SEO, Google Ads, Meta ads and social media each need different time and skills." },
+    { title: "Ad budget", text: "Your ad spend is paid directly to Google or Meta and is separate from our management fee." },
+    { title: "Competition", text: "Competitive industries and keywords need more content, effort and budget to win." },
+    { title: "Content volume", text: "The number of posts, reels, blogs and ad creatives per month affects the scope." },
+    { title: "Number of locations", text: "Multiple branches or service areas need separate local SEO and targeting." },
+    { title: "Website fixes", text: "If landing pages need improvement, that may be a one-time project alongside marketing." },
+  ],
+  estimateTips: [
+    "Tell us your main goal: calls, leads, sales or awareness",
+    "Share your website and social media links",
+    "Mention current ad spend and results, if any",
+    "List your main competitors",
+    "Let us know the areas or cities you serve",
+  ],
+  mistakes: [
+    { title: "Chasing likes and followers", text: "Vanity numbers feel good but don't pay bills. Focus on enquiries and sales." },
+    { title: "Running ads without tracking", text: "Without conversion tracking, you can't tell good campaigns from wasteful ones." },
+    { title: "Sending ads to the homepage", text: "Dedicated landing pages usually convert much better than a general homepage." },
+    { title: "Expecting SEO results in a week", text: "SEO builds over months. Combine it with ads if you need leads quickly." },
+    { title: "Buying fake reviews", text: "Fake reviews break platform rules and damage trust. Build genuine reviews instead." },
+  ],
+  chooseGuide: [
+    { title: "They talk about leads and sales", text: "A good agency focuses on business results, not just impressions and likes." },
+    { title: "They don't guarantee rankings", text: "No one controls Google. Be careful with agencies promising '#1 in 30 days'." },
+    { title: "You own the accounts", text: "Ad accounts, analytics and pages should be in your name, with access given to the agency." },
+    { title: "They explain their reports", text: "Reports should be clear, honest and tied to your goals." },
+    { title: "They test and learn", text: "Good marketers test different messages and audiences, then double down on winners." },
+    { title: "They look at your website too", text: "Marketing performance depends on landing pages. Good partners check both." },
+  ],
+  local: {
+    heading: "Digital marketing for Hyderabad businesses",
+    paragraphs: [
+      "Customers in Hyderabad search with local intent all the time, like 'dentist near Kondapur', 'interior designers in Gachibowli' or 'best coaching centre in Ameerpet'. Winning these searches requires a strong Google Business Profile, location-specific pages and genuine reviews, which are the core of our local SEO work.",
+      "For paid campaigns, we target the right neighbourhoods, from HITEC City and Madhapur to Secunderabad, LB Nagar, Kompally and Shamshabad, and adjust messages for local audiences. Real estate, education and healthcare campaigns especially benefit from careful location targeting.",
+      "We also run campaigns for brands selling across India, with national targeting, language variations and clear reporting.",
+    ],
+  },
+  moreFaqs: [
+    { q: "Should I do SEO or ads first?", a: "If you need leads quickly, start with ads while building SEO in the background. Over time, SEO lowers your dependence on paid ads." },
+    { q: "How many leads will I get?", a: "It depends on your industry, location, budget and offer. After the audit and first weeks of data, we can share realistic expectations." },
+    { q: "Do you create the ad designs and reels?", a: "Yes. We design ad creatives, carousels and short videos, and can work with your existing brand assets." },
+    { q: "Can you manage our Instagram and Facebook?", a: "Yes. We plan monthly content, design posts and reels, write captions and help respond to comments and messages." },
+    { q: "Is there a minimum contract?", a: "We usually suggest at least three months, because marketing needs time to test, learn and improve. We discuss terms openly before starting." },
+    { q: "How do you report results?", a: "You get a monthly report with leads, costs, rankings and key insights, plus a call to discuss next steps." },
+  ],
+};
+
+export default content;

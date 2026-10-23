@@ -1,0 +1,123 @@
+import type { ServiceDetail } from "../types";
+
+const content: ServiceDetail = {
+  visual: "browser",
+  highlights: ["Mobile-first design", "SEO-ready structure", "WhatsApp & call buttons", "Easy admin panel"],
+  overview: {
+    heading: "A website that works as hard as your best salesperson",
+    paragraphs: [
+      "For most customers today, your website is the first meeting with your business. Before they call, visit your shop or send a WhatsApp message, they search on Google, open your site on their phone and decide in a few seconds whether you look trustworthy. A slow, confusing or outdated website quietly sends those people to a competitor, and you never even know they were interested.",
+      "We build websites for startups, shops, clinics, schools, builders, consultants and growing companies across Hyderabad and India. Every site we make has one clear job: to explain what you do in simple words and make it easy for the right visitor to take the next step. That next step might be a call, a WhatsApp chat, a booking, an enquiry form or a purchase. We design the whole page around it.",
+      "Good websites are not about fancy effects. They are about clear headings, fast loading on mobile data, honest photos, proof that you are real, and a layout that guides people instead of confusing them. We combine that with solid technical foundations, so Google can understand your pages, your site stays secure, and you can update content without calling a developer every time.",
+      "Whether you need a simple five-page company website, a landing page for your ad campaigns, or a full web portal with logins for customers and staff, we plan it with you in plain language, show you designs before we build, and stay with you after launch.",
+    ],
+  },
+  signs: [
+    "Your current site looks outdated or breaks on mobile phones",
+    "Visitors leave quickly and you get very few enquiries from it",
+    "You can't update text, prices or photos without a developer",
+    "Your business doesn't show up when people search on Google",
+    "The site loads slowly, especially on mobile data",
+    "You don't have a website at all and rely only on social media",
+  ],
+  audiences: [
+    { title: "New businesses & startups", text: "Launch with a professional presence from day one, with a clear message, a strong first impression and simple ways for early customers to reach you." },
+    { title: "Local shops & service providers", text: "Salons, clinics, coaching centres, interior designers and repair services that need to be found by people nearby and contacted in one tap." },
+    { title: "Consultants & professionals", text: "Doctors, lawyers, CAs, architects and coaches who need a credible site that explains their expertise and builds trust before the first call." },
+    { title: "Builders & real estate firms", text: "Project pages with galleries, floor plans, location maps and enquiry forms that feed straight into your sales team." },
+    { title: "Schools, colleges & institutes", text: "Course details, admissions information, faculty, results and online enquiry forms that parents and students can use easily." },
+    { title: "Growing companies", text: "Businesses that have outgrown a basic site and need better structure, more pages, multiple languages or customer and dealer logins." },
+  ],
+  serviceTypes: [
+    { title: "Business & company websites", text: "A complete website with home, about, services, gallery, testimonials (when you have real ones) and contact pages, built to explain your business clearly.", bestFor: "Most small and medium businesses" },
+    { title: "Landing pages", text: "Focused single pages built for one campaign or one offer, designed to turn ad traffic from Google or Instagram into leads.", bestFor: "Ad campaigns and product launches" },
+    { title: "Website redesigns", text: "We keep what works on your old site, fix what doesn't, and move your content and Google rankings over carefully.", bestFor: "Outdated or underperforming sites" },
+    { title: "Web portals", text: "Secure login areas for customers, students, dealers or staff, such as booking systems, member dashboards and order tracking.", bestFor: "Businesses with repeat users" },
+    { title: "Multilingual websites", text: "English plus Telugu, Hindi or other languages, with proper language switching so each audience reads in comfort.", bestFor: "Businesses serving diverse audiences" },
+    { title: "Website maintenance", text: "Updates, backups, security patches, small changes and speed checks every month so your site stays healthy.", bestFor: "Anyone who wants peace of mind" },
+  ],
+  features: [
+    { title: "Responsive, mobile-first design", text: "Most of your visitors come from phones. Every page is designed for small screens first, then adapted for tablets and desktops, so text is readable and buttons are easy to tap." },
+    { title: "Fast loading speed", text: "We optimise images, fonts and code so pages open quickly even on slower networks. Speed affects both your Google ranking and how many visitors stay." },
+    { title: "On-page SEO foundations", text: "Proper page titles, descriptions, headings, image alt text, clean URLs and a sitemap are part of every build, so search engines can understand and rank your pages." },
+    { title: "Easy content management", text: "A simple admin panel lets you edit text, swap photos, add blog posts or change prices yourself. We also record a short walkthrough video for your team." },
+    { title: "Lead capture that reaches you", text: "Enquiry forms connect to your email, Google Sheets or CRM, and WhatsApp and click-to-call buttons are placed where visitors naturally look for them." },
+    { title: "Google Maps & local signals", text: "Embedded maps, consistent address details and local business markup help you appear in nearby searches and on Google Maps." },
+    { title: "Security & SSL", text: "Every site runs on HTTPS with a free SSL certificate, secure hosting settings, spam protection on forms and regular backups." },
+    { title: "Analytics & tracking", text: "Google Analytics and Search Console are set up so you can see how many people visit, where they come from and which pages bring enquiries." },
+    { title: "Accessibility basics", text: "Good colour contrast, readable font sizes, keyboard-friendly navigation and descriptive images make your site usable for more people." },
+    { title: "Scalable structure", text: "We plan the site so you can add new services, locations, blog posts or a shop later without rebuilding everything from scratch." },
+  ],
+  benefits: [
+    { title: "More enquiries from the same traffic", text: "Clear messaging and well-placed calls to action turn more of your existing visitors into calls and messages." },
+    { title: "Trust before the first conversation", text: "A professional, honest website reassures customers that you are established and serious about your work." },
+    { title: "Less time answering basic questions", text: "Good service pages and FAQs answer common questions upfront, so your team spends less time repeating the same information." },
+    { title: "A home you fully control", text: "Unlike social media pages, your website and domain belong to you. Algorithm changes can't take it away." },
+  ],
+  process: [
+    { title: "Discovery call", text: "We learn about your business, customers, competitors and goals, and agree on the pages and features your website needs.", duration: "1–3 days" },
+    { title: "Content & structure", text: "We plan the sitemap and page outlines, and help you gather or write content, photos and details for each page.", duration: "3–7 days" },
+    { title: "Design preview", text: "You see the homepage and key page designs before development starts, and we refine them with your feedback.", duration: "5–10 days" },
+    { title: "Development", text: "We build the site, set up the admin panel, forms, analytics and SEO basics, and test it on real phones and browsers.", duration: "1–3 weeks" },
+    { title: "Review & launch", text: "You review everything on a private staging link. Once approved, we launch on your domain and submit it to Google.", duration: "2–4 days" },
+    { title: "Training & support", text: "We show your team how to update the site and stay available for fixes, changes and improvements after launch.", duration: "Ongoing" },
+  ],
+  options: [
+    { name: "Starter website", summary: "A clean, professional site to get your business online properly.", includes: ["Up to 5–6 pages", "Mobile-first design", "Enquiry form & WhatsApp button", "Basic SEO setup", "Google Maps & analytics"], bestFor: "New and small businesses", timeline: "Usually 2–3 weeks" },
+    { name: "Growth website", summary: "A larger site built to rank on Google and generate steady leads.", includes: ["Up to 15–20 pages", "Custom design system", "Blog & admin panel", "Service and location pages", "CRM or Sheets integration"], bestFor: "Established businesses ready to grow", timeline: "Usually 4–6 weeks" },
+    { name: "Custom web portal", summary: "A website plus logins and tools for your customers or team.", includes: ["Everything in Growth", "User accounts & dashboards", "Bookings, orders or payments", "Role-based access", "Ongoing support plan"], bestFor: "Businesses with repeat users", timeline: "Scoped after discovery" },
+  ],
+  costFactors: [
+    { title: "Number of pages", text: "A five-page company website takes far less time than a fifty-page site with separate pages for every service and location." },
+    { title: "Custom design vs template", text: "A fully custom design takes more time than adapting a quality template, but it gives you a more unique look and better fit for your brand." },
+    { title: "Content writing & photos", text: "If you have ready content and photos, the project moves faster. If you need copywriting, translations or a photoshoot, that adds to the scope." },
+    { title: "Features & integrations", text: "Bookings, payments, multiple languages, member logins or connections to your CRM all add development and testing time." },
+    { title: "Platform choice", text: "A simple WordPress site, a modern Next.js site and a custom portal each have different build effort and running costs." },
+    { title: "Ongoing support", text: "Hosting, maintenance, backups and monthly updates are separate from the one-time build and can be planned to suit your budget." },
+  ],
+  estimateTips: [
+    "List the pages you think you need, even roughly",
+    "Share two or three websites you like, and what you like about them",
+    "Tell us who your customers are and what you want them to do on the site",
+    "Mention any features like bookings, payments or logins",
+    "Let us know your preferred launch date and budget range",
+  ],
+  mistakes: [
+    { title: "Designing for yourself, not your customer", text: "It's easy to focus on what looks nice to you. The best sites focus on what your customer needs to know and do next." },
+    { title: "Too much text, no clear action", text: "Long paragraphs with no clear button leave visitors unsure what to do. Every page should guide people to one main action." },
+    { title: "Ignoring mobile users", text: "A site that looks good on a laptop but is hard to use on a phone loses most of its visitors." },
+    { title: "Skipping SEO basics", text: "Without proper titles, headings and structure, even a beautiful site can stay invisible on Google." },
+    { title: "Not owning your domain and hosting", text: "Always make sure the domain, hosting and admin accounts are in your company's name, not your developer's." },
+  ],
+  chooseGuide: [
+    { title: "Look at their real work", text: "Ask to see live websites they've built and check them on your phone. Be careful with portfolios that show only mockups or famous brand names without proof." },
+    { title: "Ask who will do the work", text: "Find out who will design, build and support your site, and whether you can talk to them directly." },
+    { title: "Check what is included", text: "Confirm whether content, SEO setup, hosting help, training and post-launch fixes are part of the quote." },
+    { title: "Make sure you own everything", text: "Your domain, hosting, admin login and source files should belong to you at the end of the project." },
+    { title: "Understand the timeline", text: "A clear plan with milestones and review points is a good sign. Vague promises of 'done in 3 days' usually aren't." },
+    { title: "Ask about support after launch", text: "Websites need updates. Make sure your partner will be available when you need changes or help." },
+  ],
+  local: {
+    heading: "Website development for Hyderabad businesses",
+    paragraphs: [
+      "We work with businesses across Hyderabad and Secunderabad, from HITEC City, Madhapur and Gachibowli to Banjara Hills, Jubilee Hills, Kukatpally, Ameerpet, Begumpet, Kondapur, Uppal and LB Nagar. Being local means we can meet you in person, understand how customers in your area search and buy, and plan content that speaks to them.",
+      "For local businesses, we pay special attention to local SEO: your area and city in page titles, a consistent business address, Google Maps embeds, local business markup and pages for each location or service area you cover. Combined with a well-maintained Google Business Profile, this helps you appear when nearby customers search for what you offer.",
+      "We also work with clients across India and abroad over video calls and WhatsApp, with the same clear process and regular updates.",
+    ],
+  },
+  moreFaqs: [
+    { q: "WordPress or a custom-coded website: which is better?", a: "WordPress is great if you want to manage lots of content yourself and need a quick, cost-effective build. A custom Next.js site is faster, more secure and more flexible for growing businesses. We recommend the right option after understanding your needs." },
+    { q: "Do you write the content for the website?", a: "We can. Many clients share rough notes and we turn them into clear, simple website copy. We can also help with translations and organise photography if needed." },
+    { q: "Will my website be ready for Google?", a: "Yes. Every site includes on-page SEO basics, a sitemap, Search Console setup and fast loading. For ongoing ranking growth, our digital marketing team can help with regular SEO work." },
+    { q: "Can you redesign my site without losing my Google rankings?", a: "Yes. We map your old pages to the new ones, keep important content and set up proper redirects so search engines and visitors find the new pages." },
+    { q: "Do you provide hosting?", a: "We help you choose and set up reliable hosting in your own account, or we can manage hosting for you as part of a maintenance plan." },
+    { q: "What do you need from me to start?", a: "Your logo, basic business details, the services you offer, any photos you have and a rough idea of the pages you want. We guide you through the rest." },
+  ],
+  gallery: [
+    { image: "/showcase/fintech.jpg", title: "Dashboard-style web app", caption: "Concept design for a data-heavy web portal" },
+    { image: "/showcase/erp.jpg", title: "Operations portal", caption: "Concept design for a business web portal" },
+    { image: "/showcase/mobile.jpg", title: "Responsive experience", caption: "Concept design showing mobile-first layouts" },
+  ],
+};
+
+export default content;

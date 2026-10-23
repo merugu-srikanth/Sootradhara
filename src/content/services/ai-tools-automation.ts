@@ -1,0 +1,118 @@
+import type { ServiceDetail } from "../types";
+
+const content: ServiceDetail = {
+  visual: "chat",
+  highlights: ["AI chat on WhatsApp & web", "Automated follow-ups", "Document reading", "Human handover"],
+  overview: {
+    heading: "Let AI handle the repetitive work, so your team can focus on customers",
+    paragraphs: [
+      "Look closely at a typical working day and you'll find hours spent on the same tasks: answering the same customer questions, copying details from forms into sheets, sending reminders, preparing daily reports, reading invoices and typing them into accounts. None of this needs a person's judgement, yet it eats into the time your team could spend selling, serving and improving the business.",
+      "AI tools and automation take over this repetitive work. An AI assistant trained on your own services, prices and policies can answer customer questions on your website or WhatsApp at any hour, capture leads and pass complex conversations to your staff. Automations can move data between your forms, sheets, CRM and email without anyone touching it. AI document tools can read PDFs, invoices and forms and turn them into clean, structured data.",
+      "We take a practical, step-by-step approach. Instead of selling you a big 'AI transformation', we start by finding one or two tasks that clearly waste time, automate them properly, measure the results, and then move to the next. You stay in control of what the AI says and does, and your customer data stays private.",
+      "We work with leading AI models, including OpenAI and Anthropic's Claude, alongside automation tools like n8n and Zapier, and custom Python where needed. The goal is always the same: real time saved, fewer errors and faster replies for your customers.",
+    ],
+  },
+  signs: [
+    "Your team answers the same customer questions many times a day",
+    "Leads wait hours for a reply, especially after office hours",
+    "Staff copy data from forms, emails or PDFs into other systems",
+    "Reminders and follow-ups depend on someone remembering",
+    "Preparing daily or weekly reports takes hours",
+    "You're curious about AI but unsure where it would actually help",
+  ],
+  audiences: [
+    { title: "Businesses with busy WhatsApp", text: "Shops, clinics, institutes and builders getting many repetitive enquiries on WhatsApp every day." },
+    { title: "Sales teams", text: "Teams that need instant lead replies, qualification questions and automatic follow-up reminders." },
+    { title: "Operations & back-office", text: "Teams that process invoices, purchase orders, forms or documents manually." },
+    { title: "Customer support teams", text: "Support desks that want to answer common questions instantly and focus people on harder cases." },
+    { title: "Founders & managers", text: "Leaders who want daily summaries and reports without chasing people for updates." },
+    { title: "Education & coaching", text: "Institutes answering admission, fee and timetable questions from students and parents." },
+  ],
+  serviceTypes: [
+    { title: "AI chat assistants", text: "Chatbots trained on your own content that answer questions on your website or WhatsApp and capture leads.", bestFor: "High enquiry volumes" },
+    { title: "WhatsApp automation", text: "Automated replies, brochures, appointment booking, payment links and reminders using the official WhatsApp Business API.", bestFor: "Businesses that sell on WhatsApp" },
+    { title: "Workflow automation", text: "Connecting forms, sheets, CRM, email and accounting tools so routine steps happen automatically.", bestFor: "Teams doing repeated manual steps" },
+    { title: "Document AI", text: "Reading invoices, bills, forms and PDFs and extracting the data into your system.", bestFor: "Accounts and operations teams" },
+    { title: "AI reports & summaries", text: "Daily summaries of sales, leads, support tickets or meetings, delivered to your inbox or WhatsApp.", bestFor: "Owners and managers" },
+    { title: "Custom AI features", text: "AI built into your own app or software, such as smart search, recommendations or content generation.", bestFor: "Product companies" },
+  ],
+  features: [
+    { title: "Trained on your information", text: "The assistant learns from your approved FAQs, brochures, price lists and policies, not random internet content." },
+    { title: "Human handover", text: "When a question is complex or a customer is unhappy, the conversation moves to a team member with full context." },
+    { title: "Lead capture & qualification", text: "The assistant asks the right questions, collects contact details and sends qualified leads to your CRM or sheet." },
+    { title: "Multilingual replies", text: "Assistants can reply in English, Hindi, Telugu and other languages based on the customer's message." },
+    { title: "Appointment booking", text: "Customers can check slots and book visits, demos or appointments directly in the chat." },
+    { title: "Automated reminders", text: "Payment due dates, appointment reminders and follow-ups sent on time, every time." },
+    { title: "Data extraction", text: "Key fields from invoices, IDs or forms are read automatically and checked before saving." },
+    { title: "Conversation dashboard", text: "See every conversation, correct answers, and track what customers ask most often." },
+    { title: "Guardrails", text: "Clear limits on what the AI can say, with blocked topics and approved responses for sensitive questions." },
+    { title: "Usage tracking", text: "Measure messages handled, time saved and leads captured, so you can see the real value." },
+  ],
+  benefits: [
+    { title: "Instant replies, any time", text: "Customers get answers in seconds, even at night and on holidays, so fewer leads go cold." },
+    { title: "Hours saved every week", text: "Your team stops repeating routine work and spends time on higher-value tasks." },
+    { title: "Fewer data entry errors", text: "Automated extraction and transfers reduce typing mistakes and missed steps." },
+    { title: "Better insight into customers", text: "Conversation data shows what people ask about, helping you improve services and content." },
+  ],
+  process: [
+    { title: "Find the right tasks", text: "We look at your daily work and list tasks that are repetitive, frequent and rule-based.", duration: "3–5 days" },
+    { title: "Design the flow", text: "We map how the automation or assistant should behave, including when to hand over to a person.", duration: "3–5 days" },
+    { title: "Prepare your knowledge", text: "We gather and clean your FAQs, documents and data so the AI gives accurate answers.", duration: "1 week" },
+    { title: "Build & connect", text: "We build the assistant or automation and connect it with WhatsApp, your website, CRM or sheets.", duration: "1–3 weeks" },
+    { title: "Test with real cases", text: "We test with real questions and documents, adjust answers and tighten guardrails.", duration: "1 week" },
+    { title: "Launch, measure & improve", text: "We go live, review conversations and results regularly, and keep improving accuracy.", duration: "Ongoing" },
+  ],
+  options: [
+    { name: "Quick win automation", summary: "Automate one high-impact task end to end.", includes: ["One workflow or assistant", "Connections to 2–3 tools", "Basic dashboard", "Testing & launch", "Team walkthrough"], bestFor: "Trying AI with low risk", timeline: "Usually 2–3 weeks" },
+    { name: "AI assistant", summary: "A trained assistant for your website and WhatsApp.", includes: ["Knowledge base setup", "WhatsApp Business API", "Lead capture & CRM sync", "Human handover", "Monthly tuning"], bestFor: "Busy enquiry channels", timeline: "Usually 3–5 weeks" },
+    { name: "Automation programme", summary: "A roadmap of automations rolled out across teams.", includes: ["Process review across teams", "Multiple automations", "Document AI", "Reports & summaries", "Ongoing improvements"], bestFor: "Companies scaling operations", timeline: "Phased over months" },
+  ],
+  costFactors: [
+    { title: "Number of workflows", text: "Each automated task needs design, connection and testing." },
+    { title: "Channels", text: "Website chat, WhatsApp, email and internal tools each add setup work." },
+    { title: "Knowledge preparation", text: "Well-organised FAQs and documents make setup faster. Scattered information takes longer to prepare." },
+    { title: "Integrations", text: "Connecting with CRM, ERP, accounting or custom software adds effort depending on their APIs." },
+    { title: "Usage costs", text: "AI models and WhatsApp messages have small per-use charges, which grow with volume." },
+    { title: "Ongoing tuning", text: "Reviewing conversations and improving answers each month keeps quality high." },
+  ],
+  estimateTips: [
+    "Describe the task that wastes the most time today",
+    "Estimate how often it happens each day or week",
+    "List the tools involved, like WhatsApp, Sheets or Tally",
+    "Share sample questions, documents or forms",
+    "Tell us who should take over when the AI can't help",
+  ],
+  mistakes: [
+    { title: "Automating without clear rules", text: "If people do a task differently every time, define the right way before automating it." },
+    { title: "Letting AI answer everything", text: "Set clear limits and hand over sensitive or complex questions to people." },
+    { title: "Using outdated information", text: "AI is only as good as the content it learns from. Keep prices and policies updated." },
+    { title: "Not measuring results", text: "Track time saved and leads captured, or you won't know if it's working." },
+    { title: "Ignoring privacy", text: "Customer data must be handled carefully and in line with Indian data protection rules." },
+  ],
+  chooseGuide: [
+    { title: "They start with your problem", text: "Good partners ask about your work before talking about AI models." },
+    { title: "They suggest small first steps", text: "A pilot on one task is safer than a big, vague AI project." },
+    { title: "They explain limits honestly", text: "AI makes mistakes. A good partner designs guardrails and human handover." },
+    { title: "They care about your data", text: "Ask how customer data is stored, who can access it and which providers are used." },
+    { title: "They measure outcomes", text: "Look for clear metrics such as replies handled, hours saved and leads captured." },
+    { title: "They support improvements", text: "AI assistants need regular review and tuning after launch." },
+  ],
+  local: {
+    heading: "AI and automation for Hyderabad businesses",
+    paragraphs: [
+      "Hyderabad is home to some of India's biggest technology teams, but many local businesses, from clinics in Kukatpally to builders in Gachibowli and institutes in Ameerpet, still handle enquiries and paperwork manually. Practical AI tools can give these businesses the same speed and responsiveness as much larger companies.",
+      "We often start with WhatsApp, because that's where most Hyderabad customers reach out first. A well-trained assistant that replies instantly, shares brochures, books visits and passes serious leads to your team can make a visible difference within weeks.",
+      "We also help businesses across India adopt AI step by step, with clear plans, transparent costs and a focus on measurable results.",
+    ],
+  },
+  moreFaqs: [
+    { q: "Which AI models do you use?", a: "We choose based on the task, privacy needs and cost, often using models from OpenAI or Anthropic's Claude, and sometimes open-source models for specific needs." },
+    { q: "Can the AI make mistakes?", a: "Yes, like any tool. That's why we train it on approved content, set guardrails, test thoroughly and route uncertain cases to people." },
+    { q: "Is WhatsApp automation allowed?", a: "Yes, through the official WhatsApp Business API, which follows WhatsApp's messaging policies. We help you set it up correctly." },
+    { q: "Will automation replace my staff?", a: "Usually it frees your staff from repetitive tasks so they can focus on customers, sales and quality work." },
+    { q: "How quickly will we see results?", a: "A focused automation can show time savings within a few weeks of launch. We track results from day one." },
+    { q: "Can AI work with our existing software?", a: "In most cases, yes. If your software has an API or export options, we can connect AI and automations to it." },
+  ],
+};
+
+export default content;

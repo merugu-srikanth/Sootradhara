@@ -1,0 +1,118 @@
+import type { ServiceDetail } from "../types";
+
+const content: ServiceDetail = {
+  visual: "cloud",
+  highlights: ["AWS, Azure & Google Cloud", "Automated backups", "Safe one-click releases", "Monthly cost reviews"],
+  overview: {
+    heading: "Reliable hosting and smooth releases, without the drama",
+    paragraphs: [
+      "Your website, app and software only create value when they're online, fast and secure. Yet many businesses run on fragile setups: a single server that nobody fully understands, manual uploads for every update, backups that may or may not work, and cloud bills that grow every month without a clear reason. When something breaks, it breaks at the worst possible time.",
+      "Cloud and DevOps services fix this. We set up your hosting properly on AWS, Azure, Google Cloud or simpler providers when that's all you need, with automatic backups, monitoring, security basics and a release process where every update is tested and deployed the same safe way. If something goes wrong, you get alerted early and can roll back in minutes.",
+      "We believe in right-sized infrastructure. You don't need a complex enterprise setup for a business website, and you shouldn't pay for idle servers. We choose the simplest setup that works well for your current traffic, document it clearly, and plan how it will grow as your business does.",
+      "Most importantly, everything runs in accounts you own, with clear documentation and explanations in plain language, so you're never dependent on one person who 'knows the server'.",
+    ],
+  },
+  signs: [
+    "Your website or app is slow or goes down during busy periods",
+    "Updates are uploaded manually and sometimes break things",
+    "You're not sure if your backups actually work",
+    "Your cloud bill keeps growing without a clear explanation",
+    "Only one person knows how your servers are set up",
+    "You're moving from shared hosting or an old server to the cloud",
+  ],
+  audiences: [
+    { title: "Growing websites & stores", text: "Sites that have outgrown shared hosting and need better speed and reliability during sales and campaigns." },
+    { title: "SaaS & app companies", text: "Products that need scalable infrastructure, safe deployments and monitoring." },
+    { title: "Businesses running custom software", text: "ERP, CRM and internal tools that must stay available for daily operations." },
+    { title: "Startups", text: "Founders who want a solid, affordable foundation that can scale when users grow." },
+    { title: "Companies with legacy servers", text: "Teams running old on-premise or unmanaged servers that need modernising." },
+    { title: "Development teams", text: "In-house developers who want CI/CD pipelines, staging environments and better tooling." },
+  ],
+  serviceTypes: [
+    { title: "Cloud setup", text: "New cloud accounts set up correctly with networking, security, hosting and databases.", bestFor: "New projects and products" },
+    { title: "Cloud migration", text: "Moving websites, apps and databases from shared hosting or old servers to the cloud with minimal downtime.", bestFor: "Outgrown or ageing setups" },
+    { title: "CI/CD pipelines", text: "Automated testing and deployment so every release is consistent, safe and easy to roll back.", bestFor: "Teams releasing often" },
+    { title: "Monitoring & alerts", text: "Uptime checks, error tracking, performance monitoring and alerts to your team.", bestFor: "Business-critical systems" },
+    { title: "Cost optimisation", text: "Finding idle resources, right-sizing servers and choosing better pricing plans.", bestFor: "Rising cloud bills" },
+    { title: "Managed maintenance", text: "Updates, patches, backups and health checks handled every month.", bestFor: "Teams without in-house DevOps" },
+  ],
+  features: [
+    { title: "Right-sized hosting", text: "Servers, containers or managed platforms chosen for your actual traffic and budget." },
+    { title: "Automated backups", text: "Scheduled backups of databases and files, tested regularly so restores actually work." },
+    { title: "Staging environment", text: "A copy of your site or app for testing changes before they reach customers." },
+    { title: "One-click deployments", text: "Releases through GitHub Actions or similar pipelines, with tests and approvals." },
+    { title: "Easy rollback", text: "If a release causes problems, you can return to the previous version quickly." },
+    { title: "Uptime & error alerts", text: "Your team gets notified on email, Slack or WhatsApp when something goes wrong." },
+    { title: "SSL & security basics", text: "HTTPS everywhere, firewalls, secure access keys and regular security updates." },
+    { title: "CDN & caching", text: "Cloudflare or cloud CDNs to load pages faster for users across India and abroad." },
+    { title: "Scaling plans", text: "Auto-scaling or clear upgrade paths for traffic peaks like sales and admission seasons." },
+    { title: "Clear documentation", text: "A simple guide to your setup, access and procedures, owned by your company." },
+  ],
+  benefits: [
+    { title: "Fewer outages", text: "Monitoring and good architecture catch problems before customers notice." },
+    { title: "Faster, safer releases", text: "Automated deployments mean updates go out quickly without breaking things." },
+    { title: "Lower cloud bills", text: "Right-sizing and cost reviews stop you paying for resources you don't use." },
+    { title: "Peace of mind", text: "Tested backups and clear documentation mean you're prepared for the unexpected." },
+  ],
+  process: [
+    { title: "Infrastructure review", text: "We review your current hosting, costs, security, backups and deployment process.", duration: "3–5 days" },
+    { title: "Plan & recommendations", text: "A clear plan with the recommended setup, migration steps and expected running costs.", duration: "3–5 days" },
+    { title: "Setup or migration", text: "We build the new environment and migrate carefully, usually during low-traffic hours.", duration: "1–3 weeks" },
+    { title: "Pipelines & monitoring", text: "We set up automated deployments, staging, backups and alerts.", duration: "1–2 weeks" },
+    { title: "Handover & documentation", text: "We document everything and walk your team through the new setup.", duration: "2–3 days" },
+    { title: "Ongoing care", text: "Monthly maintenance, cost reviews and support if you choose a managed plan.", duration: "Monthly" },
+  ],
+  options: [
+    { name: "Health check", summary: "A review of your current setup with clear recommendations.", includes: ["Hosting & cost review", "Security & backup check", "Performance review", "Written recommendations", "Review call"], bestFor: "Understanding where you stand", timeline: "Usually 1 week" },
+    { name: "Setup & migration", summary: "A clean, reliable cloud setup for your systems.", includes: ["Cloud environment setup", "Migration with minimal downtime", "Backups & monitoring", "CI/CD pipeline", "Documentation"], bestFor: "Moving to a proper setup", timeline: "Usually 2–5 weeks" },
+    { name: "Managed cloud", summary: "We look after your infrastructure every month.", includes: ["Monitoring & alerts", "Updates & patches", "Backup testing", "Monthly cost review", "Priority support"], bestFor: "Teams without DevOps staff", timeline: "Ongoing, monthly" },
+  ],
+  costFactors: [
+    { title: "Number of systems", text: "One website is simpler than several apps, databases and environments." },
+    { title: "Current setup complexity", text: "Well-documented systems are quicker to migrate than old, undocumented servers." },
+    { title: "Downtime tolerance", text: "Zero-downtime migrations need more planning than ones done in a maintenance window." },
+    { title: "Security & compliance needs", text: "Stricter security or audit requirements add configuration and documentation." },
+    { title: "Cloud running costs", text: "Your monthly cloud bill is paid to the provider and depends on usage." },
+    { title: "Level of ongoing support", text: "Basic monitoring costs less than round-the-clock managed support." },
+  ],
+  estimateTips: [
+    "Tell us where your systems are hosted today",
+    "List the websites, apps and databases involved",
+    "Share your current monthly hosting or cloud bill",
+    "Mention any recent outages or problems",
+    "Let us know who manages releases today",
+  ],
+  mistakes: [
+    { title: "Never testing backups", text: "A backup you haven't restored is only a hope. Test restores regularly." },
+    { title: "Over-engineering early", text: "Complex setups cost more and are harder to manage. Start simple and scale." },
+    { title: "Sharing one admin login", text: "Use individual accounts with the right permissions, and remove access when people leave." },
+    { title: "Manual deployments", text: "Copying files by hand leads to mistakes. Automate releases." },
+    { title: "Ignoring the bill", text: "Review cloud costs monthly. Forgotten resources quietly add up." },
+  ],
+  chooseGuide: [
+    { title: "They explain things simply", text: "You should understand your setup and what you pay for, without jargon." },
+    { title: "They right-size", text: "Good partners suggest the simplest setup that meets your needs." },
+    { title: "Everything is in your accounts", text: "Cloud accounts, domains and keys should belong to your company." },
+    { title: "They document their work", text: "Ask for documentation as part of every project." },
+    { title: "They plan migrations carefully", text: "Look for a clear plan with backups, testing and rollback steps." },
+    { title: "They monitor proactively", text: "Alerts and regular checks are better than reacting after customers complain." },
+  ],
+  local: {
+    heading: "Cloud and DevOps services in Hyderabad",
+    paragraphs: [
+      "Hyderabad hosts major cloud and data centre investments, and businesses here increasingly run websites, apps and internal systems in the cloud. Many small and mid-sized companies, however, still rely on ageing servers or shared hosting that struggles under load. We help them move to reliable, well-managed setups.",
+      "We work with teams across HITEC City, Gachibowli, Madhapur and the wider city, and with clients across India who need dependable infrastructure and clear communication.",
+      "Whether you need a one-time migration or ongoing care, we focus on stability, security and sensible costs.",
+    ],
+  },
+  moreFaqs: [
+    { q: "Do I need AWS, or is simple hosting enough?", a: "Many business websites run perfectly on simpler managed hosting. We recommend AWS, Azure or Google Cloud when your needs justify it." },
+    { q: "Can you work with our in-house developers?", a: "Yes. We often set up pipelines and environments that your developers then use day to day." },
+    { q: "How do you handle security?", a: "We apply security basics like HTTPS, firewalls, least-privilege access, updates and backups, and can go deeper for specific requirements." },
+    { q: "Will you have access to our data?", a: "Only the access needed for the work, through accounts you control and can revoke at any time." },
+    { q: "Can you help during a sale or traffic spike?", a: "Yes. We can plan scaling, caching and monitoring ahead of big campaigns or launches." },
+    { q: "What if something breaks at night?", a: "With monitoring and alerts, issues are detected quickly. Response times depend on the support plan you choose." },
+  ],
+};
+
+export default content;

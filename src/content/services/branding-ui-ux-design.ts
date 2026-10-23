@@ -1,0 +1,118 @@
+import type { ServiceDetail } from "../types";
+
+const content: ServiceDetail = {
+  visual: "brand",
+  highlights: ["Logo & brand identity", "Website & app UI", "Clickable prototypes", "Source files included"],
+  overview: {
+    heading: "Design that makes people trust you at first glance",
+    paragraphs: [
+      "Customers judge a business within seconds. Before they read a single word, they notice your logo, colours, fonts, photos and how easy your website or app feels. A clear, consistent, professional look tells them you are reliable. A messy or outdated one creates doubt, even if your product is excellent.",
+      "We help businesses build that first impression with intention. Our branding work covers logos, colour palettes, typography, brand guidelines and the everyday materials your business uses, such as visiting cards, letterheads, social media templates and packaging labels. Our UI/UX work covers the screens of your website, app or software, designed so customers can do what they came to do quickly and without frustration.",
+      "Good design is not about decoration. It's about clarity: making the important things obvious, removing friction, and guiding people toward the next step. We research your audience, sketch ideas, test flows with clickable prototypes and refine until the design feels natural.",
+      "You receive organised, developer-ready files and a simple brand guide, so your team, printers, agencies and developers can keep everything consistent as you grow.",
+    ],
+  },
+  signs: [
+    "Your logo looks dated or doesn't work well in small sizes",
+    "Your website, social media and print materials all look different",
+    "Customers struggle to find information or complete actions in your app",
+    "You're launching a new business, product or sub-brand",
+    "Your design files are scattered or lost with an old designer",
+    "You want to look more premium to attract better clients",
+  ],
+  audiences: [
+    { title: "New businesses", text: "Start with a clear, memorable identity instead of a rushed logo that you'll want to change in a year." },
+    { title: "Businesses rebranding", text: "Refresh an outdated look while keeping the recognition you've built with existing customers." },
+    { title: "Startups building products", text: "UX research, wireframes and polished UI for apps and software, ready for development." },
+    { title: "Product & packaging brands", text: "Labels, boxes and brand assets that stand out on shelves and in online listings." },
+    { title: "Service professionals", text: "Doctors, consultants, architects and firms that need a trustworthy, professional image." },
+    { title: "Companies with existing apps", text: "UX audits and redesigns to fix confusing flows, poor reviews and low conversion." },
+  ],
+  serviceTypes: [
+    { title: "Logo design", text: "Logo concepts, refinements and final files in every format you'll need for print and digital use.", bestFor: "New brands and refreshes" },
+    { title: "Brand identity systems", text: "Logo, colours, typography, icon style, photography direction and a brand guide that ties everything together.", bestFor: "Businesses wanting consistency" },
+    { title: "Website UI design", text: "Page layouts, components and responsive designs for websites and landing pages.", bestFor: "New sites and redesigns" },
+    { title: "App & software UX/UI", text: "User flows, wireframes, prototypes and final screens for mobile apps and web software.", bestFor: "Digital products" },
+    { title: "UX audits", text: "A review of your existing product with clear, prioritised recommendations to improve usability.", bestFor: "Products with friction or poor reviews" },
+    { title: "Marketing & print design", text: "Social media templates, brochures, visiting cards, packaging and signage.", bestFor: "Everyday brand materials" },
+  ],
+  features: [
+    { title: "Audience & competitor research", text: "We study your customers and competitors so your brand stands out for the right reasons." },
+    { title: "Mood boards", text: "Visual directions that help us agree on style and feeling before detailed design begins." },
+    { title: "Multiple logo directions", text: "Distinct concepts to choose from, followed by focused refinement of your favourite." },
+    { title: "Colour & type system", text: "A palette and font pairing that works across screens and print, with accessibility in mind." },
+    { title: "Brand guidelines", text: "A simple guide showing correct logo use, colours, fonts and examples, so anyone can stay on-brand." },
+    { title: "User flows & wireframes", text: "Simple layouts that map each step a user takes, before visual design is added." },
+    { title: "Clickable prototypes", text: "Interactive Figma prototypes you can try on your phone and share with customers or investors." },
+    { title: "Design systems", text: "Reusable components, spacing and styles that keep screens consistent and speed up development." },
+    { title: "Developer handoff", text: "Organised files with specs, assets and notes so developers build exactly what was designed." },
+    { title: "Editable templates", text: "Canva or Figma templates your team can use for social posts and presentations." },
+  ],
+  benefits: [
+    { title: "Stronger first impressions", text: "A professional look builds trust before customers even speak to you." },
+    { title: "Easier decisions for customers", text: "Clear design helps people find information and act faster, improving conversions." },
+    { title: "Consistency everywhere", text: "One visual language across web, app, social and print makes your brand memorable." },
+    { title: "Faster, cheaper development", text: "Well-planned designs reduce rework and confusion when building websites and apps." },
+  ],
+  process: [
+    { title: "Discovery", text: "We learn about your business, audience, competitors, values and goals for the design.", duration: "3–5 days" },
+    { title: "Research & direction", text: "Mood boards and design directions to align on style before detailed work.", duration: "3–5 days" },
+    { title: "Concepts", text: "Logo directions or wireframes for your website or app, presented with reasoning.", duration: "1–2 weeks" },
+    { title: "Refinement", text: "We refine your chosen direction through agreed revision rounds.", duration: "1–2 weeks" },
+    { title: "Prototype & testing", text: "For digital products, we build clickable prototypes and gather quick feedback.", duration: "1 week" },
+    { title: "Final files & guidelines", text: "We deliver organised files, brand guidelines and developer-ready designs.", duration: "3–5 days" },
+  ],
+  options: [
+    { name: "Logo & essentials", summary: "A professional logo with the basics to start using it.", includes: ["2–3 logo directions", "Refinement rounds", "Colour palette & fonts", "Visiting card design", "All logo file formats"], bestFor: "New businesses", timeline: "Usually 2–3 weeks" },
+    { name: "Brand identity", summary: "A complete visual identity with guidelines.", includes: ["Everything in Essentials", "Brand guidelines", "Social media templates", "Stationery set", "Icon & photo style"], bestFor: "Businesses building a brand", timeline: "Usually 4–6 weeks" },
+    { name: "Product UX/UI", summary: "Research-led design for apps and software.", includes: ["User flows & wireframes", "Clickable prototype", "Final UI screens", "Design system", "Developer handoff"], bestFor: "Apps, portals and SaaS", timeline: "Scoped after discovery" },
+  ],
+  costFactors: [
+    { title: "Scope of deliverables", text: "A logo alone is much smaller than a full identity with guidelines and templates." },
+    { title: "Number of concepts", text: "More initial directions and revision rounds take more design time." },
+    { title: "Number of screens", text: "For UI work, the number of unique screens and states drives the effort." },
+    { title: "Research depth", text: "User interviews and testing add time but greatly improve product design." },
+    { title: "Print & packaging", text: "Packaging, signage and print-ready artwork need extra preparation." },
+    { title: "Ongoing design support", text: "Monthly design support for campaigns and updates can be planned separately." },
+  ],
+  estimateTips: [
+    "Tell us what you need: logo, full brand, website UI or app UI",
+    "Share brands or apps whose style you like",
+    "Describe your customers and how you want them to feel",
+    "List the materials you'll use the brand on",
+    "Mention any existing assets you want to keep",
+  ],
+  mistakes: [
+    { title: "Choosing based on personal taste only", text: "Design should appeal to your customers, not just to you." },
+    { title: "Too many fonts and colours", text: "A small, consistent set looks more professional than a mix of styles." },
+    { title: "Ignoring small sizes", text: "Your logo must work as a tiny app icon and WhatsApp profile picture too." },
+    { title: "Designing screens without flows", text: "Pretty screens fail if the steps between them are confusing." },
+    { title: "Not getting source files", text: "Always receive editable source files so you're never locked to one designer." },
+  ],
+  chooseGuide: [
+    { title: "They ask about your customers", text: "Good designers start with who you're designing for." },
+    { title: "They explain their choices", text: "Ask why a colour, font or layout was chosen. There should be a reason." },
+    { title: "Original work only", text: "Make sure designs are original, not copied templates or stock logos." },
+    { title: "Clear revision rounds", text: "Know how many revisions are included before you start." },
+    { title: "You get all files", text: "Final files, source files and fonts should be handed over to you." },
+    { title: "They understand development", text: "For digital products, designers should create files developers can actually build from." },
+  ],
+  local: {
+    heading: "Branding and UI/UX design in Hyderabad",
+    paragraphs: [
+      "Hyderabad has a rich mix of businesses: heritage brands from the Old City, modern startups in HITEC City, fashion and jewellery labels in Banjara Hills and Jubilee Hills, and fast-growing service companies across the city. We help each of them find a visual identity that feels authentic to their story and appeals to today's customers.",
+      "Meeting in person makes design collaboration easier. We often run brand workshops with founders and teams to understand their values and vision before we start sketching.",
+      "We also work remotely with brands across India, sharing concepts and prototypes online with clear feedback rounds.",
+    ],
+  },
+  moreFaqs: [
+    { q: "How long does a logo take?", a: "A logo with essentials usually takes 2 to 3 weeks, including concepts and refinement rounds." },
+    { q: "Can you work with my existing logo?", a: "Yes. We can refresh it, build a full brand system around it, or simply create consistent templates." },
+    { q: "Do you design packaging?", a: "Yes. We design labels, boxes and printed materials, and prepare print-ready files for your printer." },
+    { q: "Do you test designs with users?", a: "For apps and software, we test prototypes with real or representative users whenever possible." },
+    { q: "What software do you design in?", a: "Mainly Figma for digital design and Adobe Illustrator for logos and print. You receive files in these formats." },
+    { q: "Can you also build the website or app?", a: "Yes. Our development team can build directly from the designs, which keeps quality and consistency high." },
+  ],
+};
+
+export default content;

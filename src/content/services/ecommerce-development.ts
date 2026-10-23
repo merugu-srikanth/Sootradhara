@@ -1,0 +1,123 @@
+import type { ServiceDetail } from "../types";
+
+const content: ServiceDetail = {
+  visual: "store",
+  highlights: ["UPI, cards & COD", "Shiprocket shipping", "GST-ready invoices", "Shopify & WooCommerce"],
+  overview: {
+    heading: "An online store that makes buying easy and selling simple",
+    paragraphs: [
+      "Selling online in India is very different from a few years ago. Customers expect to pay by UPI in seconds, choose cash on delivery when they're unsure, track their order on WhatsApp and return items without a fight. If your store makes any of these steps hard, shoppers simply close the tab and buy elsewhere.",
+      "We build online stores for D2C brands, retailers, wholesalers and local shops that want to sell directly to customers. That means a store designed around your products, with clear photos, honest descriptions, fast pages and a checkout that works the way Indian buyers expect. Behind the scenes, we connect payments, shipping, inventory and GST invoicing so your daily operations stay manageable.",
+      "We work with Shopify when you want a reliable, managed platform you can run yourself, WooCommerce when you want flexibility and lower monthly fees, and custom builds when you need special pricing, B2B ordering, subscriptions or a truly unique experience. We'll recommend the right platform for your business, not the one that's easiest for us.",
+      "And because a store needs visitors to make sales, we set up analytics, product SEO and ad tracking from day one, so your marketing can be measured and improved.",
+    ],
+  },
+  signs: [
+    "You sell through Instagram or WhatsApp and orders are getting hard to manage",
+    "Marketplace commissions are eating into your margins",
+    "Your current store is slow, outdated or hard to update",
+    "Customers drop off at checkout or ask for payment options you don't have",
+    "Stock levels in your shop and online don't match",
+    "You want to build your own brand and customer relationships",
+  ],
+  audiences: [
+    { title: "D2C brands", text: "Fashion, beauty, wellness, food and lifestyle brands building direct relationships with their customers." },
+    { title: "Retail shops going online", text: "Local stores that want to sell beyond their neighbourhood while keeping shop and online stock in sync." },
+    { title: "Wholesalers & B2B sellers", text: "Bulk ordering, dealer pricing, minimum order quantities and credit terms for business customers." },
+    { title: "Home-grown businesses", text: "Home bakers, artisans and small makers who need a simple, affordable store that looks professional." },
+    { title: "Marketplace sellers", text: "Brands on Amazon or Flipkart that want their own store to reduce commissions and own customer data." },
+    { title: "Subscription businesses", text: "Recurring deliveries such as milk, groceries, pet food or monthly boxes, with automatic billing." },
+  ],
+  serviceTypes: [
+    { title: "Shopify stores", text: "Theme design, setup, apps and payment and shipping configuration on the world's most popular managed platform.", bestFor: "Brands that want to run the store themselves" },
+    { title: "WooCommerce stores", text: "Flexible online stores on WordPress, ideal when you also want a strong content site and lower monthly costs.", bestFor: "Content-rich brands and budget-conscious sellers" },
+    { title: "Custom e-commerce", text: "Fully custom stores built with Next.js and modern commerce tools for unique experiences and complex rules.", bestFor: "Brands with special requirements" },
+    { title: "B2B ordering portals", text: "Private stores for dealers and retailers with custom price lists, bulk ordering and credit limits.", bestFor: "Wholesalers and distributors" },
+    { title: "Store migration", text: "Moving from an old platform to Shopify or WooCommerce with products, customers, orders and SEO preserved.", bestFor: "Stores on outdated platforms" },
+    { title: "Store optimisation", text: "Speed improvements, checkout fixes, better product pages and conversion tracking for existing stores.", bestFor: "Stores with traffic but low sales" },
+  ],
+  features: [
+    { title: "Indian payment options", text: "UPI, cards, net banking, wallets, EMI and cash on delivery through gateways like Razorpay, Cashfree and PhonePe." },
+    { title: "Shipping integration", text: "Shiprocket or other courier partners connected for automatic labels, pickup scheduling and tracking updates." },
+    { title: "Pincode & COD checks", text: "Customers see delivery availability and estimated dates for their pincode before ordering." },
+    { title: "GST-ready invoices", text: "Automatic invoices with correct GST details for every order, plus reports for your accountant." },
+    { title: "Inventory management", text: "Stock levels, variants and low-stock alerts, with sync across your shop billing and other channels where possible." },
+    { title: "Discounts & offers", text: "Coupon codes, festive sales, buy-one-get-one, free shipping thresholds and first-order offers." },
+    { title: "WhatsApp updates", text: "Order confirmations, shipping updates and abandoned-cart reminders sent where customers actually read them." },
+    { title: "Product SEO", text: "Clean product URLs, structured data, optimised images and collection pages that can rank on Google." },
+    { title: "Reviews & trust", text: "Genuine customer reviews, clear return policies and secure checkout badges that reassure first-time buyers." },
+    { title: "Analytics & pixels", text: "Google Analytics, Meta Pixel and conversion tracking set up so you know which ads and products drive sales." },
+  ],
+  benefits: [
+    { title: "Higher margins", text: "Direct sales avoid marketplace commissions and give you control over pricing and offers." },
+    { title: "Own your customer relationships", text: "You keep customer details and can reach them again with offers, launches and updates." },
+    { title: "Sell around the clock", text: "Your store takes orders day and night, across India, without extra staff." },
+    { title: "Less manual order handling", text: "Payments, invoices, shipping labels and updates happen automatically." },
+  ],
+  process: [
+    { title: "Store planning", text: "We understand your products, customers, margins and operations, and choose the right platform.", duration: "3–5 days" },
+    { title: "Catalogue structure", text: "We plan categories, filters, product attributes and variants so shoppers find things easily.", duration: "3–5 days" },
+    { title: "Store design", text: "Homepage, collection, product and checkout designs that match your brand and build trust.", duration: "1–2 weeks" },
+    { title: "Build & integrations", text: "We set up the store, payments, shipping, taxes, invoices and notifications, and upload products.", duration: "2–4 weeks" },
+    { title: "Testing", text: "We place real test orders, check payments, refunds, shipping and emails across devices.", duration: "3–5 days" },
+    { title: "Launch & growth", text: "We launch, set up tracking and help you plan your first campaigns and improvements.", duration: "Ongoing" },
+  ],
+  options: [
+    { name: "Launch store", summary: "Everything you need to start selling online properly.", includes: ["Shopify or WooCommerce setup", "Theme customisation", "Up to 50 products uploaded", "Payments & shipping", "Basic SEO & analytics"], bestFor: "New online sellers", timeline: "Usually 2–4 weeks" },
+    { name: "Brand store", summary: "A distinctive store designed to grow a D2C brand.", includes: ["Custom design", "Advanced filters & collections", "WhatsApp & email automation", "Reviews & loyalty", "Conversion tracking"], bestFor: "Growing D2C brands", timeline: "Usually 5–8 weeks" },
+    { name: "Custom commerce", summary: "Tailor-made commerce for complex catalogues and rules.", includes: ["Custom-built storefront", "B2B or subscription logic", "ERP / inventory integration", "Multi-warehouse support", "Ongoing optimisation"], bestFor: "Large or unique businesses", timeline: "Scoped after discovery" },
+  ],
+  costFactors: [
+    { title: "Platform", text: "Shopify, WooCommerce and custom builds have different setup effort and monthly running costs." },
+    { title: "Design depth", text: "Customising a premium theme takes less time than designing every page from scratch." },
+    { title: "Catalogue size", text: "Uploading and organising 20 products is very different from 2,000 products with many variants." },
+    { title: "Integrations", text: "Connecting ERP, billing software, warehouses or marketplaces adds development and testing." },
+    { title: "Custom features", text: "Subscriptions, product builders, B2B pricing or multi-vendor features need extra development." },
+    { title: "Ongoing support", text: "App subscriptions, maintenance and marketing are ongoing costs to plan alongside the build." },
+  ],
+  estimateTips: [
+    "Share how many products and variants you have",
+    "Tell us where you sell today (Instagram, shop, marketplaces)",
+    "List the payment and shipping options you need",
+    "Share a few stores you admire",
+    "Mention any software the store must connect with",
+  ],
+  mistakes: [
+    { title: "Poor product photos", text: "Shoppers can't touch your product. Clear, consistent photos matter more than almost anything else." },
+    { title: "Hidden costs at checkout", text: "Surprise shipping fees are a top reason for abandoned carts. Be upfront." },
+    { title: "Too many steps to pay", text: "Every extra field or page at checkout loses buyers. Keep it short." },
+    { title: "No return policy clarity", text: "Unclear returns make first-time buyers hesitate. Make policies simple and visible." },
+    { title: "Launching without tracking", text: "Without analytics and pixels, you can't tell which ads or products are working." },
+  ],
+  chooseGuide: [
+    { title: "They understand Indian checkout", text: "UPI, COD, pincode checks and WhatsApp updates should be standard, not extras." },
+    { title: "They recommend platforms honestly", text: "Ask why a platform is right for you, including monthly costs." },
+    { title: "They test real orders", text: "A good partner tests payments, refunds and shipping end to end before launch." },
+    { title: "They think about marketing", text: "SEO, tracking and ad readiness should be part of the build." },
+    { title: "You own the store", text: "Store accounts, domain and payment gateway should be in your name." },
+    { title: "They support you after launch", text: "Festive sales and new launches need quick help. Make sure support is available." },
+  ],
+  local: {
+    heading: "E-commerce development in Hyderabad",
+    paragraphs: [
+      "From fashion labels in Banjara Hills and Jubilee Hills to food brands, pearl and jewellery sellers, home décor makers and wholesale traders across the city, Hyderabad has a growing community of businesses selling online. We help them launch and grow stores that serve customers locally and across India.",
+      "Local sellers often want same-day or next-day delivery within the city, store pickup options and offers for nearby customers. We plan these features alongside pan-India shipping.",
+      "We also work with brands across India, with remote planning sessions and shared review links throughout the project.",
+    ],
+  },
+  moreFaqs: [
+    { q: "Can my store sync with Amazon and Flipkart?", a: "Where integrations are available, we can connect inventory and orders with marketplace seller tools so stock stays consistent." },
+    { q: "How do I handle GST on my store?", a: "We configure taxes and GST invoices on your store. Your accountant should confirm the correct rates for your products." },
+    { q: "Can customers pay in EMI?", a: "Yes. Many payment gateways offer card and cardless EMI options that we can enable." },
+    { q: "Do you upload products?", a: "Yes. We can upload your catalogue, write product descriptions and organise collections." },
+    { q: "Can I sell internationally?", a: "Yes. We can set up international shipping, multiple currencies and the right payment options." },
+    { q: "What are the monthly costs of running a store?", a: "Costs include platform fees, apps, payment gateway charges and hosting. We give you a clear estimate before you decide." },
+  ],
+  gallery: [
+    { image: "/showcase/mobile.jpg", title: "Mobile shopping", caption: "Concept design for a mobile-first store" },
+    { image: "/showcase/fintech.jpg", title: "Sales dashboard", caption: "Concept design for store analytics" },
+    { image: "/showcase/erp.jpg", title: "Inventory view", caption: "Concept design for stock management" },
+  ],
+};
+
+export default content;

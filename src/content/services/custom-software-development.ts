@@ -1,0 +1,122 @@
+import type { ServiceDetail } from "../types";
+
+const content: ServiceDetail = {
+  visual: "code",
+  highlights: ["Built around your process", "Replaces Excel & paperwork", "Tally & Zoho integrations", "You own the code"],
+  overview: {
+    heading: "Software that fits the way your business really works",
+    paragraphs: [
+      "Every business has its own way of doing things: how orders are approved, how stock moves, how jobs are assigned, how customers are billed. Ready-made software often forces you to change those habits, or leaves gaps that your team fills with spreadsheets, notebooks and WhatsApp groups. Over time, those workarounds become slow, error-prone and hard to manage as you grow.",
+      "Custom software is built around your process instead. We sit with the people who do the work, understand each step, and design a simple system that removes repeated effort, prevents mistakes and gives managers a clear view of what's happening. It can be as small as a single internal tool or as large as a platform that runs your whole operation.",
+      "We build web-based software that works on laptops and phones, connects with the tools you already use such as Tally, Zoho, Google Sheets and payment gateways, and grows with you. You see working screens early and often, so the final product matches what your team actually needs.",
+      "Most importantly, we keep things understandable. Clear screens, plain words, short training and good documentation mean your team adopts the software quickly, which is the only way software delivers value.",
+    ],
+  },
+  signs: [
+    "Your team spends hours copying data between sheets and systems",
+    "Important information lives in personal notebooks or WhatsApp chats",
+    "Mistakes in orders, stock or billing keep repeating",
+    "Off-the-shelf tools don't fit and need constant workarounds",
+    "You pay for many software licences but use only a few features",
+    "Managers can't get a clear, up-to-date report without asking around",
+  ],
+  audiences: [
+    { title: "Manufacturers & traders", text: "Order processing, production tracking, dispatch, dealer management and pricing rules built around your exact workflow." },
+    { title: "Service companies", text: "Job assignment, technician scheduling, service reports, AMC tracking and customer billing in one place." },
+    { title: "Distributors & wholesalers", text: "Dealer portals, credit limits, order approvals and route planning that replace phone calls and paper." },
+    { title: "Education & training", text: "Batch management, attendance, assessments, certificates and fee tracking tailored to your institute." },
+    { title: "Healthcare providers", text: "Patient records, appointments, billing and lab workflows designed for your clinic or centre." },
+    { title: "Startups building a product", text: "SaaS platforms and web applications built to launch quickly and scale with your customers." },
+  ],
+  serviceTypes: [
+    { title: "Internal business tools", text: "Web apps for approvals, task tracking, inventory, job cards and reports that replace spreadsheets and paperwork.", bestFor: "Teams drowning in manual work" },
+    { title: "Customer & dealer portals", text: "Self-service portals where customers or dealers place orders, track status, download invoices and raise requests.", bestFor: "B2B businesses" },
+    { title: "SaaS products", text: "Multi-customer software products with subscriptions, user management and dashboards.", bestFor: "Founders building a software business" },
+    { title: "System integrations", text: "Connecting Tally, Zoho, Shopify, payment gateways, Google Workspace and other tools so data moves automatically.", bestFor: "Businesses using many disconnected tools" },
+    { title: "Legacy modernisation", text: "Rebuilding old desktop or outdated systems as modern, secure web applications without losing your data.", bestFor: "Companies stuck on ageing software" },
+    { title: "Reporting & dashboards", text: "Live dashboards that pull data from your systems and show the numbers managers care about.", bestFor: "Leaders who need clear visibility" },
+  ],
+  features: [
+    { title: "Role-based access", text: "Each person sees only what they need: owners see everything, managers see their teams, staff see their own tasks." },
+    { title: "Approval workflows", text: "Requests move automatically from one person to the next, with reminders, comments and a clear history." },
+    { title: "Forms built for your data", text: "Custom forms with validations prevent incomplete or wrong entries at the source." },
+    { title: "Automatic calculations", text: "Pricing, taxes, commissions, stock levels and totals are calculated by the system, not by hand." },
+    { title: "Reports & exports", text: "Daily, weekly and monthly reports with filters, plus Excel and PDF exports for sharing." },
+    { title: "Notifications", text: "Email, SMS or WhatsApp alerts for approvals, due dates, low stock and important events." },
+    { title: "Integrations", text: "Two-way sync with Tally, Zoho, Google Sheets, payment gateways and other software through APIs." },
+    { title: "Audit trail", text: "A record of who changed what and when, so you can trace any issue quickly." },
+    { title: "Mobile-friendly screens", text: "Works on phones and tablets for staff in the field, warehouse or shop floor." },
+    { title: "Backups & security", text: "Encrypted connections, regular backups and secure hosting keep your business data safe." },
+  ],
+  benefits: [
+    { title: "Hours saved every week", text: "Removing double entry and manual calculations frees your team for work that actually needs people." },
+    { title: "Fewer costly mistakes", text: "Validations and automatic rules stop errors before they reach customers or accounts." },
+    { title: "One version of the truth", text: "Everyone works from the same live data, so there are no conflicting spreadsheets." },
+    { title: "Software that grows with you", text: "New features, users and locations can be added as your business evolves." },
+  ],
+  process: [
+    { title: "Process study", text: "We map how work flows today, talk to the people involved and find the biggest time-wasters and risks.", duration: "1–2 weeks" },
+    { title: "Scope & plan", text: "We agree on modules, priorities and a phased plan, starting with the part that will save the most effort.", duration: "1 week" },
+    { title: "Design", text: "Wireframes and screen designs for each workflow, reviewed with the people who will use them daily.", duration: "1–2 weeks" },
+    { title: "Build in phases", text: "We build in short cycles and share working screens regularly, so you can give feedback as it takes shape.", duration: "4–12 weeks" },
+    { title: "Data migration & testing", text: "We clean and import your existing data, test with real scenarios and fix issues before go-live.", duration: "1–2 weeks" },
+    { title: "Training & go-live", text: "We train your team, launch the system and stay close during the first weeks to help everyone settle in.", duration: "1–2 weeks" },
+  ],
+  options: [
+    { name: "Single tool", summary: "One focused application that solves a specific problem.", includes: ["One core workflow", "User roles & logins", "Reports & exports", "Cloud hosting setup", "Training session"], bestFor: "A clear pain point", timeline: "Usually 4–6 weeks" },
+    { name: "Business system", summary: "Several connected modules for a department or the whole company.", includes: ["Multiple modules", "Approvals & notifications", "Integrations with your tools", "Data migration", "Dashboards"], bestFor: "Growing operations", timeline: "Usually 8–16 weeks" },
+    { name: "Product / platform", summary: "Software you sell to your own customers, or a large internal platform.", includes: ["Multi-tenant architecture", "Subscriptions & billing", "Admin & support tools", "Scalable cloud setup", "Ongoing development"], bestFor: "SaaS founders and large teams", timeline: "Scoped after discovery" },
+  ],
+  costFactors: [
+    { title: "Number of modules", text: "Each workflow, such as orders, stock or HR, adds design, development and testing effort." },
+    { title: "Complexity of rules", text: "Simple forms are quick; complex pricing, approvals and calculations take more careful work." },
+    { title: "Integrations", text: "Connecting to Tally, ERPs, payment gateways or government portals adds effort depending on what those systems allow." },
+    { title: "Data migration", text: "Cleaning and importing years of spreadsheets or old system data can be a significant task." },
+    { title: "Number of users & locations", text: "More users and branches need stronger permissions, performance planning and training." },
+    { title: "Support & enhancements", text: "Ongoing improvements and support are planned separately, so you can choose what fits your budget." },
+  ],
+  estimateTips: [
+    "Describe the process you want to improve, step by step",
+    "Share sample spreadsheets, forms or reports you use today",
+    "List the people or roles who will use the system",
+    "Mention tools it must connect with, like Tally or Zoho",
+    "Tell us which part hurts most, so we can start there",
+  ],
+  mistakes: [
+    { title: "Automating a broken process", text: "Software makes a bad process faster, not better. Fix the steps first, then build." },
+    { title: "Not involving the actual users", text: "The people who do the work daily know the details. Leave them out and the software won't fit." },
+    { title: "Trying to build everything at once", text: "Big-bang projects take longer and carry more risk. Phased delivery shows value sooner." },
+    { title: "Ignoring data cleanup", text: "Importing messy data into a new system creates the same problems in a new place." },
+    { title: "No owner after launch", text: "Someone in your team should own the system, collect feedback and drive improvements." },
+  ],
+  chooseGuide: [
+    { title: "They ask lots of questions", text: "A good partner wants to understand your business before talking about technology." },
+    { title: "They suggest phases", text: "Look for a plan that delivers useful pieces early, rather than one huge launch months later." },
+    { title: "They explain trade-offs", text: "Honest partners tell you when a ready-made tool might be better than custom software." },
+    { title: "You'll own the code", text: "Make sure source code, documentation and hosting accounts are handed over to you." },
+    { title: "They plan for training", text: "Adoption matters. Ask how they'll train your team and support them after launch." },
+    { title: "They think about security", text: "Ask how they handle user access, backups and data protection." },
+  ],
+  local: {
+    heading: "Custom software development in Hyderabad",
+    paragraphs: [
+      "Hyderabad's businesses range from pharma suppliers in Jeedimetla and manufacturers in Patancheru to service companies in HITEC City and traders in Begum Bazaar and Secunderabad. Many of them run on a mix of Tally, spreadsheets and phone calls. We help these businesses move to simple, reliable software without disrupting daily work.",
+      "Because we're local, we can spend time on your shop floor, warehouse or office to understand how work really happens, which leads to software that fits far better than anything designed from a distance.",
+      "We also build for clients across India and abroad, with remote workshops, shared demo links and regular review calls.",
+    ],
+  },
+  moreFaqs: [
+    { q: "How long does custom software take to build?", a: "A focused tool can be ready in 4 to 6 weeks. Larger systems are built in phases, with the first useful module usually live within 2 to 3 months." },
+    { q: "Can it work on mobile phones?", a: "Yes. We build responsive web apps that work on phones and tablets, and can add a dedicated mobile app for field teams if needed." },
+    { q: "Can we start small and add features later?", a: "Absolutely. We design the system so new modules and features can be added without rebuilding what already works." },
+    { q: "Where will the software be hosted?", a: "Usually on a cloud provider like AWS, Azure or Google Cloud, in an account that you own. We can also deploy on your own servers if required." },
+    { q: "What if our process changes later?", a: "Processes evolve. We build with flexibility in mind and offer support plans for regular changes and improvements." },
+    { q: "Do you provide documentation?", a: "Yes. You receive user guides for your team and technical documentation for future developers." },
+  ],
+  gallery: [
+    { image: "/showcase/erp.jpg", title: "Operations dashboard", caption: "Concept design for an internal operations tool" },
+    { image: "/showcase/fintech.jpg", title: "Reporting view", caption: "Concept design for a management dashboard" },
+  ],
+};
+
+export default content;

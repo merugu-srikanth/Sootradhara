@@ -1,0 +1,122 @@
+import type { ServiceDetail } from "../types";
+
+const content: ServiceDetail = {
+  visual: "dashboard",
+  highlights: ["Lead & follow-up tracking", "Inventory & GST billing", "WhatsApp built in", "No per-user licences"],
+  overview: {
+    heading: "One simple system for sales, stock, billing and teams",
+    paragraphs: [
+      "As a business grows, information spreads out. Leads arrive on WhatsApp, calls and website forms. Stock is tracked in one spreadsheet, orders in another, invoices in Tally, and staff tasks in someone's memory. Owners spend their evenings asking for updates, and important follow-ups slip through the cracks.",
+      "A CRM brings your customers and sales pipeline into one place: every enquiry captured, assigned and followed up on time. An ERP connects your operations: purchases, inventory, production, billing, dispatch and accounts working from the same live data. Together, they give you a clear, real-time picture of the business and remove a huge amount of manual work.",
+      "We build custom CRM and ERP systems designed around how your business actually runs, rather than forcing you into a rigid off-the-shelf product with features you don't need and per-user fees that grow every year. You start with the module that will help most, usually lead tracking or inventory, and add more as you grow.",
+      "Our systems run in the browser on laptops and phones, connect with WhatsApp, email, Tally and payment gateways, and come with training and support so your team actually uses them every day.",
+    ],
+  },
+  signs: [
+    "Leads come from many places and some are never followed up",
+    "You don't know your real stock levels without a physical count",
+    "Billing, inventory and accounts are in separate, disconnected tools",
+    "Sales reports take hours to prepare and are often outdated",
+    "Per-user software licence costs keep increasing as your team grows",
+    "Off-the-shelf CRM or ERP feels too complex for your team",
+  ],
+  audiences: [
+    { title: "Sales-driven businesses", text: "Real estate, education, insurance, B2B services and dealers that handle many leads and follow-ups." },
+    { title: "Manufacturers", text: "Purchase, production planning, raw material tracking, quality checks and dispatch in one system." },
+    { title: "Distributors & traders", text: "Multi-location stock, dealer orders, credit limits, collections and route management." },
+    { title: "Retail chains", text: "Central control of stock, pricing and sales across branches, with daily reports." },
+    { title: "Service companies", text: "Customer records, AMC contracts, service tickets, technician scheduling and billing." },
+    { title: "Growing SMEs", text: "Businesses outgrowing spreadsheets that need structure without enterprise-level complexity." },
+  ],
+  serviceTypes: [
+    { title: "Custom CRM", text: "Lead capture from all sources, pipelines, follow-up reminders, WhatsApp and email integration and sales reports.", bestFor: "Sales and service teams" },
+    { title: "Custom ERP", text: "Purchase, inventory, production, sales, billing, dispatch and accounts modules connected together.", bestFor: "Operations-heavy businesses" },
+    { title: "Inventory management", text: "Multi-warehouse stock, batch and expiry tracking, barcode scanning and reorder alerts.", bestFor: "Traders, retailers and manufacturers" },
+    { title: "HR & payroll inputs", text: "Attendance, leave, shifts, tasks and payroll data ready for your accountant or payroll tool.", bestFor: "Teams with many staff" },
+    { title: "Dealer & distributor portals", text: "Online ordering, schemes, outstanding balances and statements for your channel partners.", bestFor: "Businesses with dealer networks" },
+    { title: "Integrations & migration", text: "Connecting your system with Tally, Zoho, e-invoicing tools and payment gateways, plus moving data from spreadsheets.", bestFor: "Every implementation" },
+  ],
+  features: [
+    { title: "Unified lead inbox", text: "Website forms, ads, portals, calls and WhatsApp enquiries land in one list, automatically assigned to the right person." },
+    { title: "Follow-up reminders", text: "Scheduled calls and meetings with reminders, so no lead is forgotten." },
+    { title: "Sales pipeline", text: "Visual stages from new enquiry to closed deal, with values and probabilities." },
+    { title: "Quotations & invoices", text: "Create quotes and GST-ready invoices from customer records in a few clicks." },
+    { title: "Inventory tracking", text: "Real-time stock by location, with transfers, adjustments and low-stock alerts." },
+    { title: "Purchase management", text: "Purchase requests, orders, vendor records and goods receipts with approvals." },
+    { title: "Role-based dashboards", text: "Owners, managers and staff each see the numbers and tasks relevant to them." },
+    { title: "WhatsApp & email", text: "Send quotes, reminders and updates to customers directly from the system." },
+    { title: "Mobile access", text: "Sales reps and managers can check leads, stock and reports from their phones." },
+    { title: "Tally & accounting sync", text: "Push invoices and payments to your accounting software to avoid double entry." },
+  ],
+  benefits: [
+    { title: "More deals closed", text: "Timely follow-ups and a clear pipeline mean fewer lost opportunities." },
+    { title: "Accurate stock, fewer losses", text: "Real-time inventory reduces stock-outs, overstocking and wastage." },
+    { title: "Owners see the business live", text: "Dashboards replace end-of-day phone calls and manual reports." },
+    { title: "Lower long-term costs", text: "A custom system avoids rising per-user licence fees as your team grows." },
+  ],
+  process: [
+    { title: "Business mapping", text: "We map your sales and operations flows, roles, documents and reports with your team.", duration: "1–2 weeks" },
+    { title: "Module plan", text: "We prioritise modules and agree on a phased roadmap, starting with the biggest pain point.", duration: "3–5 days" },
+    { title: "Design", text: "Screens and dashboards designed for each role, reviewed with real users.", duration: "1–2 weeks" },
+    { title: "Build phase one", text: "We build the first modules in short cycles with regular demos.", duration: "4–8 weeks" },
+    { title: "Data migration & training", text: "We import customers, products and stock, train every role and support go-live.", duration: "1–2 weeks" },
+    { title: "Expand & support", text: "We add further modules, integrations and improvements based on your feedback.", duration: "Ongoing" },
+  ],
+  options: [
+    { name: "CRM starter", summary: "Capture and follow up every lead properly.", includes: ["Lead capture from all sources", "Pipeline & reminders", "WhatsApp & email templates", "Sales reports", "Mobile access"], bestFor: "Sales teams", timeline: "Usually 6–8 weeks" },
+    { name: "Operations ERP", summary: "Connect inventory, purchase, sales and billing.", includes: ["Inventory & warehouses", "Purchase & vendors", "Sales orders & GST invoices", "Tally integration", "Role-based dashboards"], bestFor: "Traders and manufacturers", timeline: "Usually 10–16 weeks" },
+    { name: "Complete business suite", summary: "CRM, ERP, HR and portals in one connected system.", includes: ["All core modules", "Dealer or customer portal", "HR & attendance", "Advanced analytics", "Ongoing development"], bestFor: "Growing multi-branch businesses", timeline: "Phased over months" },
+  ],
+  costFactors: [
+    { title: "Number of modules", text: "CRM only is much smaller than CRM plus inventory, purchase, production and HR." },
+    { title: "Business rules", text: "Complex pricing, schemes, approvals and calculations need careful design and testing." },
+    { title: "Number of locations", text: "Multiple warehouses or branches add stock transfers, permissions and reports." },
+    { title: "Integrations", text: "Tally, e-invoicing, payment gateways and marketplaces each need setup and testing." },
+    { title: "Data migration", text: "Clean data is quick to import; years of messy spreadsheets need cleanup first." },
+    { title: "Training & support", text: "Larger teams need more training sessions and support during rollout." },
+  ],
+  estimateTips: [
+    "Describe how a lead or order moves through your business today",
+    "Share your current spreadsheets and reports",
+    "List the roles and how many people will use the system",
+    "Mention your accounting software and other tools",
+    "Tell us which problem you want solved first",
+  ],
+  mistakes: [
+    { title: "Buying features you'll never use", text: "Big systems with hundreds of features often confuse teams. Start with what you need." },
+    { title: "Skipping data cleanup", text: "Importing duplicate customers and wrong stock figures makes the new system unreliable from day one." },
+    { title: "No training plan", text: "If staff don't know how to use the system, they'll go back to spreadsheets." },
+    { title: "Leaving out field users", text: "Sales reps and warehouse staff need simple mobile screens, or they won't update the system." },
+    { title: "Going live everywhere at once", text: "Roll out by team or branch to catch issues early and build confidence." },
+  ],
+  chooseGuide: [
+    { title: "They understand your industry", text: "Ask how they'd handle your specific processes, like schemes, batches or site visits." },
+    { title: "They offer phased delivery", text: "A good partner gets a useful module live early and builds from there." },
+    { title: "They plan data migration", text: "Ask exactly how your existing data will be cleaned and moved." },
+    { title: "They integrate with your accounts", text: "Make sure the system can work with Tally or your accounting tool." },
+    { title: "You own the system", text: "Code, data and hosting accounts should belong to your company." },
+    { title: "They support adoption", text: "Training, quick help and regular check-ins are essential in the first months." },
+  ],
+  local: {
+    heading: "ERP and CRM development in Hyderabad",
+    paragraphs: [
+      "Hyderabad's business landscape includes pharma and chemical suppliers, manufacturing units around the industrial belts, real estate developers across the western corridor, and thousands of traders and distributors serving Telangana and Andhra Pradesh. Many of them manage sales and stock with a mix of Tally, Excel and WhatsApp, and they need a better system without enterprise complexity.",
+      "Being in Hyderabad, we can visit your office, warehouse or factory to understand the real workflow, run training sessions in person and support your team during go-live.",
+      "We also implement CRM and ERP systems for businesses across India, with remote training and support.",
+    ],
+  },
+  moreFaqs: [
+    { q: "Is a custom ERP better than Tally?", a: "Tally is excellent for accounting. A custom ERP handles operations like orders, stock and dispatch, and can sync with Tally so both work together." },
+    { q: "Can we use it on mobile?", a: "Yes. The system works in mobile browsers, and we can add a dedicated app for field sales or warehouse teams." },
+    { q: "How secure is our data?", a: "We use secure logins, role-based access, encryption and regular backups, hosted in a cloud account owned by you." },
+    { q: "Can it handle multiple branches?", a: "Yes. We design for multiple locations, warehouses and companies if needed, with separate permissions and reports." },
+    { q: "What happens if our team grows?", a: "You can add users without per-user licence fees. We plan the system to scale with your business." },
+    { q: "Do you offer support after go-live?", a: "Yes. We offer support plans for fixes, changes, new reports and new modules." },
+  ],
+  gallery: [
+    { image: "/showcase/erp.jpg", title: "Operations ERP", caption: "Concept design for inventory and logistics" },
+    { image: "/showcase/fintech.jpg", title: "Sales dashboard", caption: "Concept design for sales and revenue tracking" },
+  ],
+};
+
+export default content;

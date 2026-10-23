@@ -1,0 +1,123 @@
+import type { ServiceDetail } from "../types";
+
+const content: ServiceDetail = {
+  visual: "phone",
+  highlights: ["Android & iOS", "Clickable prototype first", "UPI & Razorpay payments", "Store launch included"],
+  overview: {
+    heading: "Apps your customers actually keep on their phones",
+    paragraphs: [
+      "People install an app and decide within the first minute whether to keep it. If sign-up is confusing, screens are slow or the app crashes, it gets deleted, often forever. A good mobile app feels simple, loads quickly, works on everyday Android phones and solves one real problem very well.",
+      "We design and build mobile apps for startups, retail brands, service businesses, schools, clinics and companies that need tools for their field staff. Our approach is practical: we start by understanding who will use the app and what they need to get done, then design the shortest, clearest path for them to do it. Only after you are happy with a clickable prototype do we start writing code.",
+      "Most of our apps are built with Flutter or React Native, which lets one team ship apps for both Android and iOS from a single codebase. That saves time and money while still giving users a fast, native-feeling experience. When an app needs deep device features, we use native Swift and Kotlin where it makes sense.",
+      "We also handle the parts that often get forgotten: the admin panel your team uses to manage content and users, push notifications, payments, analytics, store listings, and support after launch when real users start giving feedback.",
+    ],
+  },
+  signs: [
+    "Your customers keep asking whether you have an app",
+    "Repeat customers order or book often and want a faster way",
+    "Your field staff still use paper, calls or WhatsApp to report work",
+    "You have a startup idea that needs to be tested with real users",
+    "Your current app has poor reviews, crashes or feels slow",
+    "You want to send offers and updates directly to customers' phones",
+  ],
+  audiences: [
+    { title: "Startup founders", text: "Turn an idea into a focused first version you can launch, test with users and show to investors, without building everything at once." },
+    { title: "Retail & D2C brands", text: "Shopping apps with UPI payments, order tracking, loyalty points and push offers that bring customers back more often." },
+    { title: "Service businesses", text: "Booking apps for salons, clinics, gyms, repair services and home services, with reminders and online payments." },
+    { title: "Companies with field teams", text: "Apps for sales reps, delivery staff and technicians to log visits, capture photos, collect signatures and work offline." },
+    { title: "Schools & coaching institutes", text: "Student and parent apps for attendance, homework, results, fee payments and announcements." },
+    { title: "Restaurants & cloud kitchens", text: "Direct ordering apps that reduce dependence on aggregator commissions and build a loyal customer base." },
+  ],
+  serviceTypes: [
+    { title: "Cross-platform apps", text: "One codebase for Android and iOS using Flutter or React Native, which keeps cost and timelines lower without sacrificing quality.", bestFor: "Most businesses and startups" },
+    { title: "Native Android & iOS apps", text: "Apps built with Kotlin and Swift for maximum performance and deep access to device features like Bluetooth, sensors or advanced camera use.", bestFor: "Performance-critical apps" },
+    { title: "MVP development", text: "A lean first version with only the core features, built quickly so you can learn from real users before investing more.", bestFor: "New products and startups" },
+    { title: "App redesign & rebuild", text: "We review your existing app, fix usability problems, improve speed and modernise the design while keeping your users' data safe.", bestFor: "Apps with poor ratings or old code" },
+    { title: "Admin panels & backends", text: "The web dashboard and server behind your app, where your team manages users, orders, content and reports.", bestFor: "Every app that needs management" },
+    { title: "App maintenance", text: "OS updates, bug fixes, performance tuning, store compliance changes and small new features every month.", bestFor: "Live apps that must stay healthy" },
+  ],
+  features: [
+    { title: "Simple OTP sign-up", text: "Phone number and OTP login, with optional Google or Apple sign-in, so users get in quickly without remembering passwords." },
+    { title: "Payments built for India", text: "UPI, cards, net banking and wallets through Razorpay, Cashfree or PhonePe, plus invoices, refunds and payment history." },
+    { title: "Push notifications", text: "Order updates, reminders and offers sent to users' phones, with controls so you don't overwhelm them." },
+    { title: "Offline support", text: "Field and rural users can keep working without network. Data syncs automatically when the connection returns." },
+    { title: "Maps & location", text: "Store locators, delivery tracking, GPS check-ins and distance-based services using Google Maps." },
+    { title: "In-app chat & support", text: "Chat with your team, WhatsApp handover or support tickets, so users get help without leaving the app." },
+    { title: "Admin dashboard", text: "A web panel for your team to manage users, content, orders, notifications and reports, with role-based access." },
+    { title: "Analytics", text: "See how many people use the app, where they drop off, and which features matter most, so you can improve with real data." },
+    { title: "Security", text: "Encrypted connections, secure token storage, role-based permissions and safe handling of personal data." },
+    { title: "Performance on everyday phones", text: "We test on mid-range Android devices that most Indian users actually own, not just the latest flagship phones." },
+  ],
+  benefits: [
+    { title: "Customers come back more often", text: "An app icon on their home screen and well-timed notifications keep your business top of mind." },
+    { title: "Faster, smoother transactions", text: "Saved details and one-tap payments make repeat orders and bookings much quicker." },
+    { title: "Less manual work for your team", text: "Bookings, orders and field reports flow directly into your system instead of through calls and messages." },
+    { title: "Better understanding of customers", text: "App analytics show what customers use and value, helping you make smarter business decisions." },
+  ],
+  process: [
+    { title: "Product discovery", text: "We define your users, the core problem, must-have features and what success looks like for the first version.", duration: "1–2 weeks" },
+    { title: "UX & clickable prototype", text: "Wireframes and a clickable Figma prototype let you test the flow on your phone before any code is written.", duration: "2–3 weeks" },
+    { title: "Visual design", text: "Final screen designs with your brand colours, icons and states for loading, errors and empty screens.", duration: "1–2 weeks" },
+    { title: "Development sprints", text: "We build in two-week sprints, sharing test builds you can install and use as the app takes shape.", duration: "6–12 weeks" },
+    { title: "Testing & store launch", text: "Testing on real devices, fixing issues, preparing store listings and handling Play Store and App Store review.", duration: "1–2 weeks" },
+    { title: "Improve & grow", text: "After launch, we monitor crashes and reviews, fix issues quickly and plan improvements based on real usage.", duration: "Ongoing" },
+  ],
+  options: [
+    { name: "MVP app", summary: "The core features needed to launch and learn from real users.", includes: ["Android & iOS (cross-platform)", "OTP login & profiles", "3–5 core features", "Basic admin panel", "Store submission"], bestFor: "Startups testing an idea", timeline: "Usually 8–10 weeks" },
+    { name: "Business app", summary: "A polished app for customers or staff, with payments and notifications.", includes: ["Everything in MVP", "Payments & invoices", "Push notifications", "Analytics dashboard", "Integrations with your systems"], bestFor: "Growing businesses", timeline: "Usually 10–16 weeks" },
+    { name: "Platform app", summary: "Multiple user types, complex workflows and a full management backend.", includes: ["Customer, partner & admin apps", "Real-time tracking or chat", "Advanced roles & reports", "Scalable cloud backend", "Ongoing support plan"], bestFor: "Marketplaces and large operations", timeline: "Scoped after discovery" },
+  ],
+  costFactors: [
+    { title: "Number of features and screens", text: "Every screen and feature needs design, development and testing. A focused feature list keeps the first version affordable." },
+    { title: "Platforms", text: "Cross-platform development covers Android and iOS together. Separate native apps for each platform take more effort." },
+    { title: "User types", text: "An app with customers, delivery partners and admins needs separate flows and permissions for each, which adds scope." },
+    { title: "Integrations", text: "Payments, maps, SMS, WhatsApp, ERP or third-party APIs each require setup and testing." },
+    { title: "Backend complexity", text: "Real-time features like live tracking or chat, heavy data or complex business rules need a stronger backend." },
+    { title: "Maintenance plan", text: "Apps need regular updates for new Android and iOS versions. A monthly plan keeps your app stable and compliant." },
+  ],
+  estimateTips: [
+    "Describe who will use the app and what they need to do",
+    "List the must-have features for the first version",
+    "Share apps you like and what you like about them",
+    "Mention any systems the app must connect to",
+    "Tell us your launch target and budget range",
+  ],
+  mistakes: [
+    { title: "Building every feature at once", text: "Launching with too many features takes longer, costs more and makes it harder to learn what users truly want." },
+    { title: "Skipping the prototype", text: "Changing a design is cheap; changing finished code is expensive. A prototype catches problems early." },
+    { title: "Testing only on high-end phones", text: "Many users have mid-range Android phones with limited storage and memory. Test where your users are." },
+    { title: "Forgetting the admin side", text: "Your team needs good tools to manage the app. A weak admin panel creates daily headaches." },
+    { title: "No plan after launch", text: "Reviews, crashes and OS updates need attention. Budget time and money for improvements after release." },
+  ],
+  chooseGuide: [
+    { title: "Check apps they've shipped", text: "Ask for live apps you can download and try yourself. Look at reviews and how the app feels on your phone." },
+    { title: "Ask how they handle design", text: "A good partner shows you prototypes and designs before coding, and welcomes your feedback." },
+    { title: "Understand their tech choices", text: "Ask why they recommend Flutter, React Native or native code for your app. The answer should match your needs, not just their habits." },
+    { title: "Clarify ownership", text: "The app should be published under your developer accounts and the source code handed over to you." },
+    { title: "Discuss post-launch support", text: "Ask what happens when a bug appears or a new OS version breaks something after launch." },
+    { title: "Look for clear communication", text: "Regular updates, test builds and honest timelines matter more than big promises." },
+  ],
+  local: {
+    heading: "Mobile app development in Hyderabad",
+    paragraphs: [
+      "Hyderabad is one of India's busiest technology cities, and businesses here, from HITEC City startups to family businesses in Secunderabad, increasingly need apps that their customers and teams can rely on. We work with clients across Madhapur, Gachibowli, Kondapur, Banjara Hills, Kukatpally, Begumpet, Manikonda and beyond, and we're happy to meet in person for workshops and reviews.",
+      "Building for Indian users means planning for UPI payments, OTP logins, varied network speeds, many Android device sizes and, often, users who prefer simple language or regional language options. We design with these realities in mind from the start.",
+      "We also work with founders and companies across India and overseas who want a responsive team with clear communication and predictable delivery.",
+    ],
+  },
+  moreFaqs: [
+    { q: "Flutter or React Native: which do you recommend?", a: "Both are excellent for cross-platform apps. Flutter gives very consistent UI and strong performance; React Native fits well if you already use React for your website. We recommend one based on your app's needs and future plans." },
+    { q: "How do you keep my app idea confidential?", a: "We're happy to sign an NDA before detailed discussions, and access to your project files is limited to the team working on it." },
+    { q: "Can you take over an app built by another company?", a: "Yes. We first review the code and setup, share an honest assessment, and then plan fixes, improvements or a rebuild if needed." },
+    { q: "Will the app work without internet?", a: "We can build offline support for key features, with data syncing automatically when the network is back." },
+    { q: "Do you help with Play Store and App Store approval?", a: "Yes. We prepare store listings, screenshots and privacy details, and handle the review process for both stores." },
+    { q: "What does it cost to keep an app running?", a: "Ongoing costs include cloud hosting, store developer accounts and maintenance. We estimate these upfront so there are no surprises." },
+  ],
+  gallery: [
+    { image: "/showcase/mobile.jpg", title: "Mobile wallet app", caption: "Concept design for a personal finance app" },
+    { image: "/showcase/fintech.jpg", title: "App admin dashboard", caption: "Concept design for the admin side of an app" },
+    { image: "/showcase/erp.jpg", title: "Field operations view", caption: "Concept design for a field team dashboard" },
+  ],
+};
+
+export default content;
