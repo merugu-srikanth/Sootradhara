@@ -1,16 +1,18 @@
 "use client";
 
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ArrowRight, ArrowUpRight, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, X, Check, MessageSquareText } from "lucide-react";
 
 interface ShowcaseItem {
   id: number;
   title: string;
   category: string;
   image: string;
+  features: string[];
   link: string;
   /** What kind of product it is, e.g. "Mobile app" */
   kind: string;
@@ -18,14 +20,14 @@ interface ShowcaseItem {
 }
 
 const ITEMS: ShowcaseItem[] = [
-  { id: 1, title: "Personal finance app", category: "Mobile App", image: "/showcase/mobile.jpg", link: "/services/mobile-app-development", kind: "Mobile app", blurb: "Track spending, savings and goals with a clean, secure app." },
-  { id: 2, title: "Inventory & billing dashboard", category: "ERP & CRM", image: "/showcase/erp.jpg", link: "/services/erp-crm-development", kind: "Web dashboard", blurb: "Stock, invoices and GST reports in one simple screen." },
-  { id: 3, title: "Loan tracking dashboard", category: "Fintech", image: "/showcase/fintech.jpg", link: "/industries/fintech", kind: "Web app", blurb: "Live view of applications, disbursals and collections." },
-  { id: 4, title: "Fashion store app", category: "E-commerce", image: "/showcase/mobile.jpg", link: "/services/ecommerce-development", kind: "Online store", blurb: "Browse, pay by UPI and track orders in a few taps." },
-  { id: 5, title: "College admissions portal", category: "Education", image: "/showcase/erp.jpg", link: "/industries/education", kind: "Web portal", blurb: "Online applications, document uploads and fee payment." },
-  { id: 6, title: "Sales lead tracker", category: "CRM", image: "/showcase/fintech.jpg", link: "/services/erp-crm-development", kind: "Web app", blurb: "Every enquiry in one place, with follow-up reminders." },
-  { id: 7, title: "Restaurant ordering app", category: "Restaurants", image: "/showcase/mobile.jpg", link: "/industries/restaurants", kind: "Mobile app", blurb: "Direct orders and table bookings without commissions." },
-  { id: 8, title: "Clinic appointments system", category: "Healthcare", image: "/showcase/erp.jpg", link: "/industries/healthcare", kind: "Web app", blurb: "Slot booking with WhatsApp reminders for patients." },
+  { id: 1, title: "Personal finance app", category: "Mobile App", image: "/showcase/finance-app.jpg", link: "/services/mobile-app-development", kind: "Mobile app", blurb: "Track spending, savings and goals with a clean, secure app.", features: ["Spending by category with weekly charts", "Savings goals with progress tracking", "UPI-ready, secure login with fingerprint"] },
+  { id: 2, title: "Inventory & billing dashboard", category: "ERP & CRM", image: "/showcase/inventory-billing.jpg", link: "/services/erp-crm-development", kind: "Web dashboard", blurb: "Stock, invoices and GST reports in one simple screen.", features: ["Live stock levels with low-stock alerts", "GST invoices created and shared in one click", "Daily sales and tax reports"] },
+  { id: 3, title: "Loan tracking dashboard", category: "Fintech", image: "/showcase/loan-dashboard.jpg", link: "/industries/fintech", kind: "Web app", blurb: "Live view of applications, disbursals and collections.", features: ["Applications tracked from KYC to disbursal", "EMI collections and overdue follow-ups", "Role-based access with audit logs"] },
+  { id: 4, title: "Fashion store app", category: "E-commerce", image: "/showcase/fashion-store.jpg", link: "/services/ecommerce-development", kind: "Online store", blurb: "Browse, pay by UPI and track orders in a few taps.", features: ["Product catalogue with sizes and wishlist", "UPI, cards and COD checkout", "Order tracking with WhatsApp updates"] },
+  { id: 5, title: "College admissions portal", category: "Education", image: "/showcase/admissions-portal.jpg", link: "/industries/education", kind: "Web portal", blurb: "Online applications, document uploads and fee payment.", features: ["Step-by-step online application form", "Document uploads with status checks", "Online fee payment and receipts"] },
+  { id: 6, title: "Sales lead tracker", category: "CRM", image: "/showcase/lead-tracker.jpg", link: "/services/erp-crm-development", kind: "Web app", blurb: "Every enquiry in one place, with follow-up reminders.", features: ["Leads from ads, website and WhatsApp in one place", "Follow-up reminders for every enquiry", "Pipeline view from new lead to won deal"] },
+  { id: 7, title: "Restaurant ordering app", category: "Restaurants", image: "/showcase/restaurant-app.jpg", link: "/industries/restaurants", kind: "Mobile app", blurb: "Direct orders and table bookings without commissions.", features: ["Menu with veg / non-veg labels and photos", "Direct ordering without aggregator commissions", "Table booking with instant confirmation"] },
+  { id: 8, title: "Clinic appointments system", category: "Healthcare", image: "/showcase/clinic-appointments.jpg", link: "/industries/healthcare", kind: "Web app", blurb: "Slot booking with WhatsApp reminders for patients.", features: ["Doctor-wise slot booking for patients", "Automatic WhatsApp reminders before visits", "Front-desk view of all appointments for the day"] },
 ];
 
 // Two copies so the loop always fills wide screens; the copy is hidden from screen readers.
@@ -119,6 +121,13 @@ export default function CurvedShowcase() {
     state.current.velocity = dir * 900;
   }, []);
 
+  // The modal renders into <body> so no section can paint over it
+  const canPortal = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
+
   const open = (item: ShowcaseItem, fromKeyboard: boolean) => {
     if (!fromKeyboard && state.current.moved > 6) return; // it was a drag, not a click
     setSelected(item);
@@ -128,7 +137,18 @@ export default function CurvedShowcase() {
     if (!selected) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setSelected(null);
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    // Lock page scroll, pause the carousel and hide the floating WhatsApp button
+    const s = state.current;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    document.documentElement.classList.add("menu-open");
+    s.hovering = true;
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+      document.documentElement.classList.remove("menu-open");
+      s.hovering = false;
+    };
   }, [selected]);
 
   return (
@@ -222,11 +242,12 @@ export default function CurvedShowcase() {
                     src={item.image}
                     alt={isClone ? "" : `${item.title} (concept design)`}
                     fill
-                    sizes="260px"
+                    sizes="(max-width: 640px) 220px, 260px"
+                    quality={90}
                     draggable={false}
-                    className="object-cover opacity-85 transition-all duration-700 ease-out group-hover:scale-110 group-hover:opacity-100"
+                    className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                   />
-                  <span className="absolute inset-0 bg-linear-to-t from-[#0f0d0a] via-[#0f0d0a]/30 to-transparent" />
+                  <span className="absolute inset-0 bg-linear-to-t from-[#0f0d0a] via-[#0f0d0a]/10 via-40% to-transparent" />
 
                   {/* Top row */}
                   <span className="absolute inset-x-3 top-3 flex items-center justify-between">
@@ -257,67 +278,106 @@ export default function CurvedShowcase() {
       {/* Floor line */}
       <div className="mx-auto mt-2 h-px w-2/3 bg-linear-to-r from-transparent via-gold/40 to-transparent" aria-hidden="true" />
 
-      {/* Detail modal */}
-      <AnimatePresence>
-        {selected && (
-          <motion.div
-            className="fixed inset-0 z-[90] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
-            role="dialog"
-            aria-modal="true"
-            aria-label={selected.title}
-            onClick={() => setSelected(null)}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <motion.div
-              className="relative w-full max-w-lg overflow-hidden rounded-3xl border border-gold-soft bg-white text-ink shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-              initial={{ opacity: 0, y: 30, scale: 0.96 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 20, scale: 0.97 }}
-              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <div className="relative h-64 w-full bg-ink">
-                <Image src={selected.image} alt={`${selected.title} (concept design)`} fill sizes="512px" className="object-cover" />
-                <div className="absolute inset-0 bg-linear-to-t from-ink via-ink/20 to-transparent" />
+      {/* Detail modal (portal to <body>, above the header and every section) */}
+      {canPortal &&
+        createPortal(
+          <AnimatePresence>
+            {selected && (
+              <motion.div
+                key="showcase-modal"
+                className="fixed inset-0 z-[1000] flex items-end justify-center sm:items-center sm:p-6"
+                role="dialog"
+                aria-modal="true"
+                aria-label={selected.title}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.25 }}
+              >
                 <button
-                  onClick={() => setSelected(null)}
-                  className="absolute right-4 top-4 grid h-9 w-9 place-items-center rounded-full bg-black/60 text-white hover:bg-black/90"
+                  type="button"
                   aria-label="Close"
+                  tabIndex={-1}
+                  onClick={() => setSelected(null)}
+                  className="absolute inset-0 cursor-default bg-[#0b0a08]/80 backdrop-blur-md"
+                />
+
+                <motion.div
+                  className="relative grid max-h-[92dvh] w-full max-w-3xl grid-cols-1 overflow-hidden rounded-t-[28px] border border-gold/30 bg-white text-ink shadow-[0_50px_120px_-30px_rgba(0,0,0,0.8)] sm:rounded-[28px] md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]"
+                  initial={{ opacity: 0, y: 40, scale: 0.97 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 30, scale: 0.98 }}
+                  transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  <X className="h-4 w-4" />
-                </button>
-                <div className="absolute bottom-4 left-5 right-5 text-white">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-gold">{selected.category}</span>
-                  <h3 className="text-3xl">{selected.title}</h3>
-                </div>
-              </div>
-              <div className="space-y-4 p-6">
-                <p className="inline-block rounded-full border border-gold-soft bg-ivory px-3 py-1 text-xs font-semibold text-gold-ink">
-                  Concept / Sample Work
-                </p>
-                <p className="text-sm leading-relaxed text-slate-600">
-                  {selected.blurb} This is a concept design by our team, not a client project. Want something like this for your
-                  business? Let&apos;s talk.
-                </p>
-                <div className="flex items-center gap-3 pt-2">
-                  <Link
-                    href={selected.link}
-                    onClick={() => setSelected(null)}
-                    className="btn-gold inline-flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold"
-                  >
-                    See related service <ArrowRight className="h-4 w-4" />
-                  </Link>
-                  <button onClick={() => setSelected(null)} className="rounded-full px-4 py-3 text-sm font-medium text-slate-700 hover:bg-ivory">
-                    Close
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
+                  <div className="relative h-56 bg-[#0f0d0a] sm:h-72 md:h-auto md:min-h-[480px]">
+                    <Image
+                      src={selected.image}
+                      alt={`${selected.title} (concept design)`}
+                      fill
+                      sizes="(min-width: 768px) 360px, 100vw"
+                      quality={90}
+                      className="object-cover object-top"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-[#0f0d0a]/60 via-transparent to-transparent" />
+                    <span className="absolute left-4 top-4 rounded-full border border-gold/40 bg-black/55 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-gold backdrop-blur-md">
+                      Concept / Sample Work
+                    </span>
+                  </div>
+
+                  <div className="relative flex flex-col overflow-y-auto p-6 sm:p-8">
+                    <button
+                      type="button"
+                      onClick={() => setSelected(null)}
+                      className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full border border-gold-soft bg-white text-ink transition-colors hover:border-gold hover:bg-ivory"
+                      aria-label="Close"
+                    >
+                      <X className="h-4 w-4" />
+                    </button>
+
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-ink">{selected.category}</p>
+                    <h3 className="mt-2 pr-10 text-3xl leading-tight text-ink sm:text-4xl">{selected.title}</h3>
+                    <p className="mt-1 text-sm text-slate-500">{selected.kind}</p>
+
+                    <p className="mt-5 text-[15px] leading-relaxed text-slate-600">{selected.blurb}</p>
+
+                    <ul className="mt-5 space-y-2.5">
+                      {selected.features.map((f) => (
+                        <li key={f} className="flex items-start gap-2.5 text-sm text-slate-700">
+                          <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-ivory text-gold-ink">
+                            <Check className="h-3 w-3" strokeWidth={3} />
+                          </span>
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <p className="mt-6 rounded-2xl bg-ivory px-4 py-3 text-xs leading-relaxed text-slate-600">
+                      A concept design made by our team to show our style. Not a client project.
+                    </p>
+
+                    <div className="mt-6 flex flex-col gap-2.5 sm:flex-row md:mt-auto md:pt-6">
+                      <Link
+                        href="/contact"
+                        onClick={() => setSelected(null)}
+                        className="btn-gold inline-flex flex-1 items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-ink"
+                      >
+                        <MessageSquareText className="h-4 w-4" /> Build something like this
+                      </Link>
+                      <Link
+                        href={selected.link}
+                        onClick={() => setSelected(null)}
+                        className="inline-flex items-center justify-center gap-1.5 rounded-full border border-gold-soft px-5 py-3 text-sm font-semibold text-gold-ink transition-colors hover:bg-ivory"
+                      >
+                        Related service <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>,
+          document.body,
         )}
-      </AnimatePresence>
     </section>
   );
 }

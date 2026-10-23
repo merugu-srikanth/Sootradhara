@@ -114,9 +114,9 @@ const content: ServiceDetail = {
     { q: "What does it cost to keep an app running?", a: "Ongoing costs include cloud hosting, store developer accounts and maintenance. We estimate these upfront so there are no surprises." },
   ],
   gallery: [
-    { image: "/showcase/mobile.jpg", title: "Mobile wallet app", caption: "Concept design for a personal finance app" },
-    { image: "/showcase/fintech.jpg", title: "App admin dashboard", caption: "Concept design for the admin side of an app" },
-    { image: "/showcase/erp.jpg", title: "Field operations view", caption: "Concept design for a field team dashboard" },
+    { image: "/showcase/finance-app.jpg", title: "Personal finance app", caption: "Concept design for tracking spending, savings and goals" },
+    { image: "/showcase/fashion-store.jpg", title: "Shopping app", caption: "Concept design for browsing and paying by UPI" },
+    { image: "/showcase/restaurant-app.jpg", title: "Food ordering app", caption: "Concept design for menus, cart and table booking" },
   ],
 };
 

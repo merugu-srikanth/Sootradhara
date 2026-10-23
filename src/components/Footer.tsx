@@ -9,6 +9,7 @@ import { site, telHref, whatsappHref, addressLine, socialLinks } from "@/lib/sit
 
 const company = [
   { label: "About Us", href: "/about" },
+  { label: "Our Team", href: "/team" },
   { label: "Our Work", href: "/#work" },
   { label: "How We Work", href: "/#process" },
   { label: "Insights", href: "/insights" },
@@ -98,7 +99,7 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <Link href="/privacy-policy" className="hover:text-gold">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-gold">Terms of Service</Link>
-            <Link href="/sitemap.xml" className="hover:text-gold">Sitemap</Link>
+            {/* <Link href="/sitemap.xml" className="hover:text-gold">Sitemap</Link> */}
           </div>
         </div>
       </div>

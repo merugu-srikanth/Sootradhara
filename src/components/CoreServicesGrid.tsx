@@ -42,8 +42,7 @@ export default function CoreServicesGrid({ showHeading = true }: { showHeading?:
                 </ul>
               </div>
 
-              <div className="mt-6 flex items-center justify-between border-t border-gold-soft pt-4">
-                <span className="text-xs text-slate-400">{s.card.tools}</span>
+              <div className="mt-6 flex items-center justify-end border-t border-gold-soft pt-4">
                 <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-ink">
                   Explore
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

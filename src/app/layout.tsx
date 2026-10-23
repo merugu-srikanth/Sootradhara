@@ -59,19 +59,9 @@ export const metadata: Metadata = {
     locale: "en_IN",
     siteName: site.legalName,
     description: defaultDescription,
-    images: [{ url: "/sootradhara-logo.png", width: 1298, height: 649, alt: "Sootradhara Ventures Pvt Ltd logo" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/sootradhara-logo.png"],
-  },
-  icons: {
-    icon: [
-      { url: "/favicon.png", type: "image/png" },
-      { url: "/favicon.ico", sizes: "any" },
-    ],
-    shortcut: "/favicon.png",
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
 };
 

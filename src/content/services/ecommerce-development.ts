@@ -114,9 +114,9 @@ const content: ServiceDetail = {
     { q: "What are the monthly costs of running a store?", a: "Costs include platform fees, apps, payment gateway charges and hosting. We give you a clear estimate before you decide." },
   ],
   gallery: [
-    { image: "/showcase/mobile.jpg", title: "Mobile shopping", caption: "Concept design for a mobile-first store" },
-    { image: "/showcase/fintech.jpg", title: "Sales dashboard", caption: "Concept design for store analytics" },
-    { image: "/showcase/erp.jpg", title: "Inventory view", caption: "Concept design for stock management" },
+    { image: "/showcase/fashion-store.jpg", title: "Mobile shopping", caption: "Concept design for a mobile-first fashion store with UPI checkout" },
+    { image: "/showcase/restaurant-app.jpg", title: "Online ordering", caption: "Concept design for direct food ordering without commissions" },
+    { image: "/showcase/inventory-billing.jpg", title: "Inventory view", caption: "Concept design for stock and billing management" },
   ],
 };
 

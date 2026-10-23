@@ -114,8 +114,9 @@ const content: ServiceDetail = {
     { q: "Do you provide documentation?", a: "Yes. You receive user guides for your team and technical documentation for future developers." },
   ],
   gallery: [
-    { image: "/showcase/erp.jpg", title: "Operations dashboard", caption: "Concept design for an internal operations tool" },
-    { image: "/showcase/fintech.jpg", title: "Reporting view", caption: "Concept design for a management dashboard" },
+    { image: "/showcase/inventory-billing.jpg", title: "Operations dashboard", caption: "Concept design for stock, billing and GST in one internal tool" },
+    { image: "/showcase/loan-dashboard.jpg", title: "Reporting view", caption: "Concept design for a live management dashboard" },
+    { image: "/showcase/lead-tracker.jpg", title: "Workflow board", caption: "Concept design for tracking tasks and approvals by stage" },
   ],
 };
 

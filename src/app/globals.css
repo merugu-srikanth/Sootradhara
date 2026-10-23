@@ -371,3 +371,10 @@ details > summary::-webkit-details-marker {
 /* Hide the floating WhatsApp button while the mobile menu is open */
 .menu-open .wa-float { opacity: 0; pointer-events: none; }
 .wa-float { transition: opacity .2s ease, transform .2s ease; }
+
+/* Team avatars: blink now and then, tilt head on card hover */
+@keyframes avatarBlink { 0%, 94%, 100% { transform: scaleY(1); } 97% { transform: scaleY(0.1); } }
+.avatar-eyes { transform-box: fill-box; transform-origin: center; animation: avatarBlink 4.5s infinite; }
+.avatar-head { transform-box: fill-box; transform-origin: 50% 90%; transition: transform .6s cubic-bezier(.22,1,.36,1); }
+.group:hover .avatar-head { transform: rotate(-6deg) translateY(-1px); }
+@media (prefers-reduced-motion: reduce) { .avatar-eyes { animation: none; } }

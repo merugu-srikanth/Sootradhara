@@ -15,8 +15,9 @@ import { industries } from "@/lib/industries";
 type MenuKey = "services" | "industries" | null;
 
 const plainLinks = [
-  { label: "Work", href: "/#work" },
+  // { label: "Work", href: "/#work" },
   { label: "About", href: "/about" },
+  { label: "Team", href: "/team" },
   { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },
 ];
@@ -75,6 +76,11 @@ export default function Navbar() {
         {/* Desktop navigation */}
         <nav className="hidden lg:flex items-center gap-1" aria-label="Main">
           {/* Services */}
+          <Link
+            href="/"
+          >
+            Home
+          </Link>
           <div
             className="relative"
             onMouseEnter={() => setOpenMenu("services")}
@@ -93,13 +99,15 @@ export default function Navbar() {
             <AnimatePresence>
             {openMenu === "services" && (
               <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 6 }}
+                initial={{ opacity: 0, y: 10, scale: 0.98 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 6, scale: 0.98 }}
+                style={{ transformOrigin: "40px 0" }}
                 transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute left-1/2 top-full w-[780px] -translate-x-1/2 pt-3"
+                className="absolute -left-2 top-full w-[640px] pt-3 xl:w-[780px]"
               >
-                <div className="grid grid-cols-3 gap-1 rounded-3xl border border-gold-soft bg-white p-3.5 shadow-[0_30px_60px_-20px_rgba(20,18,15,0.18)]">
+                <div className="relative grid grid-cols-2 gap-1 rounded-3xl border border-gold/50 bg-white p-3.5 shadow-[0_30px_60px_-20px_rgba(20,18,15,0.18)] xl:grid-cols-3">
+                  <span className="absolute -top-[9px] left-[38px] h-4 w-4 rotate-45 rounded-tl-[4px] border-l border-t border-gold/50 bg-white" aria-hidden="true" />
                   {services.map((s) => (
                     <Link
                       key={s.slug}
@@ -115,7 +123,7 @@ export default function Navbar() {
                   ))}
                   <Link
                     href="/services"
-                    className="col-span-3 mt-1 flex items-center justify-center gap-1.5 rounded-xl border-t border-gold-soft pt-3 pb-1 text-xs font-semibold text-gold-ink"
+                    className="col-span-full mt-1 flex items-center justify-center gap-1.5 rounded-xl border-t border-gold-soft pt-3 pb-1 text-xs font-semibold text-gold-ink"
                   >
                     View all services <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
@@ -144,26 +152,34 @@ export default function Navbar() {
             <AnimatePresence>
             {openMenu === "industries" && (
               <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 6 }}
+                initial={{ opacity: 0, y: 10, scale: 0.98 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 6, scale: 0.98 }}
+                style={{ transformOrigin: "40px 0" }}
                 transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute left-1/2 top-full w-[440px] -translate-x-1/2 pt-3"
+                className="absolute -left-2 top-full w-[600px] pt-3"
               >
-                <div className="rounded-3xl border border-gold-soft bg-white p-3.5 shadow-[0_30px_60px_-20px_rgba(20,18,15,0.18)]">
+                <div className="relative grid grid-cols-2 gap-1 rounded-3xl border border-gold/50 bg-white p-3.5 shadow-[0_30px_60px_-20px_rgba(20,18,15,0.18)]">
+                  <span className="absolute -top-[9px] left-[38px] h-4 w-4 rotate-45 rounded-tl-[4px] border-l border-t border-gold/50 bg-white" aria-hidden="true" />
                   {industries.map((ind) => (
                     <Link
                       key={ind.slug}
                       href={`/industries/${ind.slug}`}
-                      className="group flex items-center gap-3 rounded-xl p-2.5 hover:bg-ivory"
+                      className="group flex items-start gap-3 rounded-xl p-2.5 hover:bg-ivory"
                     >
                       <IconTile icon={ind.icon} size="sm" />
                       <span>
                         <span className="block text-sm font-semibold text-ink group-hover:text-gold-ink">{ind.name}</span>
-                        <span className="block text-xs text-slate-500 line-clamp-1">{ind.tagline}</span>
+                        <span className="block text-xs text-slate-500 line-clamp-2">{ind.tagline}</span>
                       </span>
                     </Link>
                   ))}
+                  <Link
+                    href="/industries"
+                    className="col-span-full mt-1 flex items-center justify-center gap-1.5 rounded-xl border-t border-gold-soft pt-3 pb-1 text-xs font-semibold text-gold-ink"
+                  >
+                    View all industries <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
                 </div>
               </motion.div>
             )}

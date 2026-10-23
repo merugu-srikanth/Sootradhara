@@ -459,7 +459,7 @@ export default function ServicePageTemplate({ service }: { service: Service }) {
                     <Reveal key={g.title} delay={i * 0.1}>
                       <figure className="card-shine group relative overflow-hidden rounded-3xl border border-gold/30">
                         <div className="relative aspect-[4/3] overflow-hidden">
-                          <Image src={g.image} alt={`${g.title} (concept design)`} fill sizes="(min-width: 768px) 33vw, 90vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                          <Image src={g.image} alt={`${g.title} (concept design)`} fill sizes="(min-width: 768px) 33vw, 90vw" className="object-cover object-[center_14%] transition-transform duration-700 group-hover:scale-105" />
                           <span className="absolute inset-0 bg-linear-to-t from-ink via-ink/20 to-transparent" />
                           <span className="absolute left-4 top-4 rounded-full border border-gold/40 bg-black/50 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-gold backdrop-blur">Concept</span>
                         </div>

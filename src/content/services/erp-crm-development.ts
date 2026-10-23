@@ -114,8 +114,8 @@ const content: ServiceDetail = {
     { q: "Do you offer support after go-live?", a: "Yes. We offer support plans for fixes, changes, new reports and new modules." },
   ],
   gallery: [
-    { image: "/showcase/erp.jpg", title: "Operations ERP", caption: "Concept design for inventory and logistics" },
-    { image: "/showcase/fintech.jpg", title: "Sales dashboard", caption: "Concept design for sales and revenue tracking" },
+    { image: "/showcase/inventory-billing.jpg", title: "Inventory & billing ERP", caption: "Concept design for stock, invoices and GST reports" },
+    { image: "/showcase/lead-tracker.jpg", title: "Sales pipeline CRM", caption: "Concept design for leads, follow-ups and won deals" },
   ],
 };
 

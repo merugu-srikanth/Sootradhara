@@ -3,6 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   cacheComponents: true,
+  // Allowed next/image qualities (90 keeps the showcase mockups crisp)
+  images: { qualities: [75, 90] },
   partialPrefetching: true,
   turbopack: {
     rules: {

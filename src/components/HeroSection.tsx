@@ -156,13 +156,13 @@ export default function HeroSection() {
               <ArrowRight className="h-[18px] w-[18px] transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
             <Link
-              href="/#work"
+              href="/services"
               className="group inline-flex h-14 items-center gap-3 rounded-full border border-gold-soft bg-white/70 pl-2.5 pr-7 text-[15px] font-semibold text-ink transition-colors hover:border-gold max-sm:w-full max-sm:justify-center"
             >
               <span className="grid h-9 w-9 place-items-center rounded-full border border-gold-soft bg-ivory transition-transform duration-300 group-hover:scale-110">
                 <Play className="h-3 w-3 fill-gold-ink text-gold-ink" />
               </span>
-              See Our Work
+              See Our services
             </Link>
           </motion.div>
 

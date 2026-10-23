@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: industry.metaTitle,
     description: industry.metaDescription,
     alternates: { canonical: url },
-    openGraph: { title: `${industry.metaTitle} | Sootradhara`, description: industry.metaDescription, url },
+    openGraph: { title: `${industry.metaTitle} | Sootradhara`, description: industry.metaDescription, url, images: ["/opengraph-image.png"] },
   };
 }
 

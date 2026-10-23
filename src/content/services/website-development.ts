@@ -114,9 +114,9 @@ const content: ServiceDetail = {
     { q: "What do you need from me to start?", a: "Your logo, basic business details, the services you offer, any photos you have and a rough idea of the pages you want. We guide you through the rest." },
   ],
   gallery: [
-    { image: "/showcase/fintech.jpg", title: "Dashboard-style web app", caption: "Concept design for a data-heavy web portal" },
-    { image: "/showcase/erp.jpg", title: "Operations portal", caption: "Concept design for a business web portal" },
-    { image: "/showcase/mobile.jpg", title: "Responsive experience", caption: "Concept design showing mobile-first layouts" },
+    { image: "/showcase/admissions-portal.jpg", title: "Admissions portal", caption: "Concept design for online applications and fee payment" },
+    { image: "/showcase/clinic-appointments.jpg", title: "Online booking system", caption: "Concept design for appointment slots with reminders" },
+    { image: "/showcase/lead-tracker.jpg", title: "Enquiry dashboard", caption: "Concept design for managing website enquiries" },
   ],
 };
 
