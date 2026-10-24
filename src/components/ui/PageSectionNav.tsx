@@ -1,11 +1,14 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-/** Sticky "On this page" bar for long pages. Highlights the section in view. */
+/**
+ * Sticky "On this page" bar for long pages. Highlights the section in view.
+ * It never scrolls by itself (that made the page jump on phones); visitors
+ * swipe or tap the tabs.
+ */
 export default function PageSectionNav({ items }: { items: { id: string; label: string }[] }) {
   const [active, setActive] = useState(items[0]?.id);
-  const barRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,15 +25,10 @@ export default function PageSectionNav({ items }: { items: { id: string; label: 
     return () => observer.disconnect();
   }, [items]);
 
-  // Keep the active chip visible in the scrollable bar
-  useEffect(() => {
-    const chip = barRef.current?.querySelector<HTMLElement>(`[data-id="${active}"]`);
-    chip?.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
-  }, [active]);
 
   return (
     <nav aria-label="On this page" className="sticky top-[72px] z-30 border-y border-gold-soft bg-white/90 backdrop-blur-xl">
-      <div ref={barRef} className="no-scrollbar mx-auto flex w-[90%] max-w-[1280px] items-center gap-1.5 overflow-x-auto py-2.5">
+      <div className="no-scrollbar mx-auto flex w-[90%] max-w-[1280px] items-center gap-1.5 overflow-x-auto py-2.5">
         <span className="mr-2 shrink-0 text-[10px] font-semibold uppercase tracking-[0.18em] text-gold-ink">On this page</span>
         {items.map((i) => (
           <a

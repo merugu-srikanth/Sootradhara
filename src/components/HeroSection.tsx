@@ -181,7 +181,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right: thread hub */}
-        <motion.div style={{ x: tx, y: ty }} className="relative mx-auto aspect-square w-full max-w-[560px] lg:ml-auto lg:mr-0">
+        <motion.div style={{ x: tx, y: ty }} className="relative mx-auto hidden aspect-square w-full max-w-[560px] lg:ml-auto lg:mr-0 lg:block">
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}
             animate={go({ opacity: 1, scale: 1 })}

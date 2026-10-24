@@ -32,7 +32,8 @@ html {
 body {
   background-color: #ffffff;
   color: var(--ink);
-  overflow-x: hidden;
+  /* "clip" (not "hidden") so sticky elements keep working */
+  overflow-x: clip;
 }
 
 /* Headings use the brand serif everywhere (in the base layer so utilities can override) */

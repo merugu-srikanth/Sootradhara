@@ -22,6 +22,9 @@ const values = [
   { icon: Users, title: "We stay after launch", text: "The same people who build your product help you support and grow it." },
 ];
 
+// The illustrated avatar cards are kept in the code but hidden for now.
+const SHOW_AVATAR_CARDS = false;
+
 export default function TeamPage() {
   return (
     <>
@@ -44,7 +47,62 @@ export default function TeamPage() {
         </div>
       </section>
 
-      {/* Team grid */}
+      {/* Team list: text only */}
+      <section className="relative bg-white py-16 sm:py-24">
+        <div className="mx-auto grid w-[90%] max-w-[1280px] grid-cols-1 gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <div className="lg:sticky lg:top-32">
+              <Reveal>
+                <p className="eyebrow">Meet the team</p>
+                <h2 className="mt-3 text-4xl leading-[1.05] text-ink sm:text-5xl">
+                  Our team <em className="text-gold-grad font-serif italic">players</em>
+                </h2>
+                <p className="mt-5 max-w-sm leading-relaxed text-slate-600">
+                  Developers, designers, cloud engineers and marketers working as one team, so every part of your product
+                  connects.
+                </p>
+                <div className="mt-8 h-px w-24 bg-linear-to-r from-gold to-transparent" aria-hidden="true" />
+              </Reveal>
+            </div>
+          </div>
+
+          <ol className="border-t border-gold-soft lg:col-span-8">
+            {team.map((m, i) => (
+              <Reveal as="li" key={m.role + m.name} delay={Math.min(i, 5) * 0.05}>
+                <article className="group relative grid grid-cols-[auto_1fr] gap-x-5 border-b border-gold-soft py-7 transition-colors duration-500 hover:bg-ivory/60 sm:grid-cols-[auto_1fr_auto] sm:gap-x-8 sm:px-4">
+                  {/* Gold line that sweeps across on hover */}
+                  <span
+                    className="absolute inset-x-0 -bottom-px h-px origin-left scale-x-0 bg-linear-to-r from-gold via-gold to-gold/0 transition-transform duration-700 ease-out group-hover:scale-x-100"
+                    aria-hidden="true"
+                  />
+                  <span className="pt-1.5 font-serif text-lg text-gold/70 transition-colors duration-500 group-hover:text-gold-ink">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+
+                  <div className="min-w-0 transition-transform duration-500 ease-out group-hover:translate-x-1.5">
+                    <h3 className="text-3xl leading-tight text-ink sm:text-4xl">{m.name || m.role}</h3>
+                    <p className="mt-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gold-ink">{m.name ? m.role : "Sootradhara team"}</p>
+                    <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-slate-600">{m.focus}</p>
+                  </div>
+
+                  {m.years ? (
+                    <div className="col-start-2 mt-4 sm:col-start-3 sm:mt-0 sm:text-right">
+                      <p className="font-serif text-4xl leading-none text-ink sm:text-5xl">
+                        {m.years}
+                        <span className="text-gold">+</span>
+                      </p>
+                      <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.16em] text-slate-500">Years experience</p>
+                    </div>
+                  ) : null}
+                </article>
+              </Reveal>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Avatar cards (hidden for now: set SHOW_AVATAR_CARDS to true to bring them back) */}
+      {SHOW_AVATAR_CARDS && (
       <section className="bg-white py-16 sm:py-24">
         <div className="mx-auto w-[90%] max-w-[1280px]">
           <SectionHeading eyebrow="Meet the team" title="Our team players" />
@@ -80,6 +138,7 @@ export default function TeamPage() {
           </ul>
         </div>
       </section>
+      )}
 
       {/* How we work */}
       <section className="relative overflow-hidden bg-ink py-16 text-white sm:py-24">
